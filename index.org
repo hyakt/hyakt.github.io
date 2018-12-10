@@ -1,12 +1,12 @@
 # -*- mode:org -*-
 #+OPTIONS: ^:nil \n:t toc:nil num:nil html-style:nil
-#+LANGUAGE: ja
-#+TITLE:  hyaktory📗
+#+LANGUAGE: en
+#+TITLE:  I'm hyakt🤗
 #+AUTHOR: Hayato KAJIYAMA
 #+EMAIL: kaji1216@gmail.com
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./main.css"/>
 
-* About
+* 📗About
   Hayato KAJIYAMA
 
   I'm software engineer. I love Emacs.
