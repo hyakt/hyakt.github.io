@@ -1,13 +1,14 @@
 # -*- mode:org -*-
 #+OPTIONS: ^:nil \n:t toc:nil num:nil html-style:nil
 #+LANGUAGE: en
-#+TITLE:  I'm hyakt🤗
+#+TITLE:   I'm hyakt🤗
 #+AUTHOR: Hayato KAJIYAMA
 #+EMAIL: kaji1216@gmail.com
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./main.css"/>
+#+HTML_HEAD: <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130604911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-130604911-1');</script>
 
 * 📗About
-  Hayato KAJIYAMA
+  *Hayato KAJIYAMA*
 
   I'm software engineer. I love Emacs.
   I have a master's degree in Computer Science.
@@ -37,4 +38,5 @@
 * Keyboard
   - [[http://www.pfu.fujitsu.com/hhkeyboard/bt/][HHKB Professional BT]]
   - [[http://eucalyn.hatenadiary.jp/entry/about-mint60-01][Mint60]]
+
 
