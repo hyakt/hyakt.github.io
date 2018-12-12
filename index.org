@@ -15,12 +15,11 @@
 
 * Research
 ** Enhancing Gaming Experience System Using See-Through HMD(2014)
-   https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=98998&item_no=1&page_id=13&block_id=8
+   https://bit.ly/2LajDTe
 
 ** SHAPIO: Shape I/O Controller for Video Games(2015)
    A game controller that inputs and outputs game events through its three-dimensional shape.
    https://dl.acm.org/citation.cfm?id=2810318
-
    #+HTML: <iframe width="560" height="315" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 * Product
@@ -31,6 +30,7 @@
    https://github.com/hyakt/emacs-dashboard-hackernews
 
 * Link
+  - Mail: hyakt0@gmail.com
   - Github: https://github.com/hyakt/
   - Twitter: https://twitter.com/hyakt0/
   - Facebook: https://www.facebook.com/hyakt0/
