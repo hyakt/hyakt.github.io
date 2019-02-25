@@ -1,26 +1,49 @@
+:root{
+    --fg: #3b4252;
+    --bg: #eceff4;
+    --fg-title: #eceff4;
+    --bg-title: #2e3440;
+    --fg-h3: #ebcb8b;
+}
+
 body {
     margin: 0;
     padding: 0;
+    color: var(--fg);
+    background: var(--bg);
 }
 
 h3 {
-    padding: 0.5em;/*文字周りの余白*/
+    padding: 0.3em;/*文字周りの余白*/
     font-size: 1rem;
-    color: #494949;/*文字色*/
-    border-left: solid 5px #e9e9e9;/*左線（実線 太さ 色）*/
+    /* color: var(--fg-h3); */
+    border-left: solid px var(--fg-h3);/*左線（実線 太さ 色）*/
 }
 
-.title {
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding: 4rem;
+    padding: 3rem;
     font-weight: bold;
-    text-align: center;
-    color: white;
-    background: black;
+    color: var(--fg-title);
+    background: var(--bg-title);
 }
 
-#content{
-    margin: auto;
+.header #icon {
+    justify-content: center;
+    align-items: center;
+    border-radius: 130px;
+}
+
+.header .sns {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header h1{
+    margin: 2rem;
 }
 
 .status {

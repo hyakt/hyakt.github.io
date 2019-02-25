@@ -1,15 +1,15 @@
 # -*- mode:org -*-
-#+OPTIONS: ^:nil \n:t toc:nil num:nil html-style:nil
+#+OPTIONS: ^:nil \n:t toc:nil num:nil html-style:nil TeX:nil title:nil
 #+LANGUAGE: en
-#+TITLE:   I'm hyakt🤗
 #+AUTHOR: Hayato KAJIYAMA
+#+TITLE: Hayato KAJIYAMA
 #+EMAIL: kaji1216@gmail.com
+#+HTML_HEAD: <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./main.css"/>
 #+HTML_HEAD: <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130604911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-130604911-1');</script>
+#+INCLUDE: "./header.html" html
 
-* 📗About
-  *Hayato KAJIYAMA*
-
+* About me
   I'm software engineer. I love Emacs.
   I have a master's degree in Computer Science.
 
@@ -30,11 +30,11 @@
    https://github.com/hyakt/emacs-dashboard-hackernews
 
 * Link
-  - Mail: hyakt0@gmail.com
+  - MailTo: hyakt0@gmail.com
   - Github: https://github.com/hyakt/
   - Twitter: https://twitter.com/hyakt0/
   - Facebook: https://www.facebook.com/hyakt0/
-
+  - LinkedIn: https://www.linkedin.com/in/hyakt/
 * Keyboard
   - [[http://www.pfu.fujitsu.com/hhkeyboard/bt/][HHKB Professional BT]]
   - [[http://eucalyn.hatenadiary.jp/entry/about-mint60-01][Mint60]]
