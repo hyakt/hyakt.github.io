@@ -2,7 +2,7 @@
 #+OPTIONS: ^:nil \n:t toc:nil num:nil html-style:nil TeX:nil title:nil
 #+LANGUAGE: en
 #+AUTHOR: Hayato KAJIYAMA
-#+TITLE: Hayato KAJIYAMA
+#+TITLE: I'm Hayato KAJIYAMA
 #+EMAIL: kaji1216@gmail.com
 #+HTML_HEAD: <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./main.css"/>
@@ -10,20 +10,34 @@
 #+INCLUDE: "./header.html" header
 
 * Product & Research
-** Enhancing Gaming Experience System Using See-Through HMD(2014)
-   https://bit.ly/2LajDTe
-
-** SHAPIO: Shape I/O Controller for Video Games(2015)
-   A game controller that inputs and outputs game events through its three-dimensional shape.
-   https://dl.acm.org/citation.cfm?id=2810318
-   #+HTML: <iframe width="560" height="315" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-** Hugo Theme (2017)
-   https://github.com/hyakt/hugo-theme-pleasure
-
 ** Hackernews on Emacs Dashboard (2018)
+   #+attr_html: :width 360px :style margin-left: auto; margin-right: auto;
+   [[file:./images/emacs-dashboard.png]]
+   Hacker Newsを表示するEmacs Dashboard用のプラグインを作成しました。
+   This is a plugin for the Emacs Dashboard.
+   Display a topstories of Hacker News on Dashboard.
    https://github.com/hyakt/emacs-dashboard-hackernews
 
+** Hugo Theme (2017)
+   #+attr_html: :width 360px :style margin-left: auto; margin-right: auto;
+   [[file:./images/hugo.png]]
+   ブログジェネレータ[[https://gohugo.io/][Hugo]]の明るいテーマを作成しました。
+   https://github.com/hyakt/hugo-theme-pleasure
+
+** SHAPIO: Shape I/O Controller for Video Games (2015)
+   #+HTML: <iframe width="357" height="210" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   「テレビゲームの面白さは使用するコントローラによって変化する」という根拠に基づき、
+   テレビゲーム内のシチュエーションに合わせて、変形するコントローラを作成し評価しました。
+   A game controller that inputs and outputs game events through its three-dimensional shape.
+   https://dl.acm.org/citation.cfm?id=2810318
+
+** Enhancing Gaming Experience System Using See-Through HMD (2014)
+   #+attr_html: :width 360px :style margin-left: auto; margin-right: auto;
+   [[file:./images/hmd.png]]
+   家庭用ゲーム機をプレイする際に、シースルー型のHMDを装着することで、
+   TV画面外にもエフェクトを表示し、もっと楽しくゲームをプレイできる仕組みを作りました
+   This system that enhances gaming experience for off-line-console gamers. This system displays common scene for all players on a shared monitor, and it displays player-specific information on each player’s see-through head-mounted display (HMD). 
+   https://bit.ly/2LajDTe
 
 * Using Keyboard
   - [[http://www.pfu.fujitsu.com/hhkeyboard/bt/][HHKB Professional BT]]

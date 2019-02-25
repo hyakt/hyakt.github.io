@@ -3,7 +3,7 @@
     --bg: #eceff4;
     --fg-title: #eceff4;
     --bg-title: #2e3440;
-    --fg-h3: #ebcb8b;
+    --fg-h3: #b48ead;
 }
 
 body {
@@ -17,12 +17,6 @@ a:link { color: #81a1c1; }
 a:visited { color: #81a1c1; }
 a:hover { color: #3b4252; }
 
-h3 {
-    padding: 0.3rem;/*文字周りの余白*/
-    font-size: 1rem;
-    border-left: solid 6px var(--fg-h3);/*左線（実線 太さ 色）*/
-}
-
 .header {
     margin: 0;
     padding: 2rem;
@@ -34,6 +28,10 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header h1{
+    margin: 2rem;
 }
 
 .header .title #subtitle{
@@ -56,20 +54,39 @@ h3 {
     padding: 0 1rem 0 1rem;
 }
 
-.header h1{
-    margin: 2rem;
+.outline-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.outline-2 h2{
+    display: block;
+    width: 90%;
+    /* max-width: 500px; */
+}
+
+.outline-3 {
+    flex: 1 0 300px;
+    box-sizing: border-box;
+    margin: 1rem .25em;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.outline-3 h3 {
+    margin: 0;
+    color: var(--fg-title);
+    background: var(--fg-h3);
+    padding: 1rem;/*文字周りの余白*/
+    height: 5rem;
+}
+
+.outline-3 .outline-text-3 {
+    padding: 1rem;/*文字周りの余白*/
 }
 
 .status {
     text-align: center;
 }
-
-.outline-2 {
-    margin: 2rem 0 0 1rem;
-}
-
-.outline-3 {
-    margin: 0 0 0 1rem;
-}
-
-
