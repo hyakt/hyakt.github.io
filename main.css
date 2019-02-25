@@ -13,33 +13,47 @@ body {
     background: var(--bg);
 }
 
+a:link { color: #81a1c1; }
+a:visited { color: #81a1c1; }
+a:hover { color: #3b4252; }
+
 h3 {
-    padding: 0.3em;/*文字周りの余白*/
+    padding: 0.3rem;/*文字周りの余白*/
     font-size: 1rem;
-    /* color: var(--fg-h3); */
-    border-left: solid px var(--fg-h3);/*左線（実線 太さ 色）*/
+    border-left: solid 6px var(--fg-h3);/*左線（実線 太さ 色）*/
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
-    padding: 3rem;
-    font-weight: bold;
+    padding: 2rem;
     color: var(--fg-title);
     background: var(--bg-title);
 }
 
-.header #icon {
+.header .title {
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header .title #subtitle{
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.header .title #icon {
     border-radius: 130px;
 }
 
 .header .sns {
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
+    font-size: 1.2rem;
+}
+
+.header .sns .item {
+    margin: 0;
+    padding: 0 1rem 0 1rem;
 }
 
 .header h1{

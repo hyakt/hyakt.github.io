@@ -7,13 +7,9 @@
 #+HTML_HEAD: <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./main.css"/>
 #+HTML_HEAD: <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130604911-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-130604911-1');</script>
-#+INCLUDE: "./header.html" html
+#+INCLUDE: "./header.html" header
 
-* About me
-  I'm software engineer. I love Emacs.
-  I have a master's degree in Computer Science.
-
-* Research
+* Product & Research
 ** Enhancing Gaming Experience System Using See-Through HMD(2014)
    https://bit.ly/2LajDTe
 
@@ -22,20 +18,14 @@
    https://dl.acm.org/citation.cfm?id=2810318
    #+HTML: <iframe width="560" height="315" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-* Product
 ** Hugo Theme (2017)
    https://github.com/hyakt/hugo-theme-pleasure
 
 ** Hackernews on Emacs Dashboard (2018)
    https://github.com/hyakt/emacs-dashboard-hackernews
 
-* Link
-  - MailTo: hyakt0@gmail.com
-  - Github: https://github.com/hyakt/
-  - Twitter: https://twitter.com/hyakt0/
-  - Facebook: https://www.facebook.com/hyakt0/
-  - LinkedIn: https://www.linkedin.com/in/hyakt/
-* Keyboard
+
+* Using Keyboard
   - [[http://www.pfu.fujitsu.com/hhkeyboard/bt/][HHKB Professional BT]]
   - [[http://eucalyn.hatenadiary.jp/entry/about-mint60-01][Mint60]]
 
