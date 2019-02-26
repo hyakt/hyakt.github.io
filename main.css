@@ -97,7 +97,7 @@ a:hover { color: #3b4252; }
 }
 
 .outline-3 img {
-    padding: 1rem 0; /*文字周りの余白*/
+    padding: 0 0 1rem 0;
 }
 
 .outline-3 .outline-text-3 {
