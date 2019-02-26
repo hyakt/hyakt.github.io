@@ -60,9 +60,14 @@ a:hover { color: #3b4252; }
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 1rem;
+    width: 100%;
 }
 
 .outline-2 h2{
+    width: 100%;
+}
+
+.outline-2 .outline-text-2{
     width: 100%;
 }
 
