@@ -16,7 +16,7 @@
   今はソフトバンク株式会社というところで社内システム(主に在庫管理)の開発を行っています。
 
   何かご連絡がある際は下記まで。
-  hyakt0@gmail.com
+  hyakt0[at]gmail.com
 
 * Product & Research
 ** Hackernews on Emacs Dashboard (2018)
