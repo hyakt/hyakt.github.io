@@ -11,36 +11,65 @@
 
 * Product & Research
 ** Hackernews on Emacs Dashboard (2018)
-   #+attr_html: :width 360px :style margin-left: auto; margin-right: auto;
+   #+attr_html: :width 100% :style margin-left: auto; margin-right: auto;
    [[file:./images/emacs-dashboard.png]]
    Hacker Newsを表示するEmacs Dashboard用のプラグインを作成しました。
    This is a plugin for the Emacs Dashboard.
    Display a topstories of Hacker News on Dashboard.
    https://github.com/hyakt/emacs-dashboard-hackernews
 
+   *使用技術:*
+   EmacsLisp
+
 ** Hugo Theme (2017)
-   #+attr_html: :width 360px :style margin-left: auto; margin-right: auto;
+   #+attr_html: :width 100% :style margin-left: auto; margin-right: auto;
    [[file:./images/hugo.png]]
    ブログジェネレータ[[https://gohugo.io/][Hugo]]の明るいテーマを作成しました。
    https://github.com/hyakt/hugo-theme-pleasure
 
+   *使用技術:*
+   HTML, Stylus(CSS), Netrify
+
+** この本いつ発売したっけBot (2017)
+   #+attr_html: :width 100% :style margin-left: auto; margin-right: auto;
+   [[file:./images/linebot.png]]
+   LineBotのハンズオンで本の最新巻がいつ発売されたか教えてくれるLineのBotを作成しました。
+
+   *使用技術:*
+   Node.js, Express, Google Books API, Now
+
 ** SHAPIO: Shape I/O Controller for Video Games (2015)
-   #+HTML: <iframe width="357" height="210" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   #+HTML: <iframe width="100%" height="210" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    「テレビゲームの面白さは使用するコントローラによって変化する」という根拠に基づき、
    テレビゲーム内のシチュエーションに合わせて、変形するコントローラを作成し評価しました。
+   CHIPLAY 2015で発表しました。
    A game controller that inputs and outputs game events through its three-dimensional shape.
    https://dl.acm.org/citation.cfm?id=2810318
 
+   *使用技術*
+   - ハードウェア： Arduino, サーボモータ, 角度センサ, BLE
+   - ミドルウェア： Swift, JavaScript
+   - ソフトウェア（ゲーム）: Unity, C#
+
 ** Enhancing Gaming Experience System Using See-Through HMD (2014)
-   #+attr_html: :width 360px :style margin-left: auto; margin-right: auto;
+   #+attr_html: :width 100% :style margin-left: auto; margin-right: auto;
    [[file:./images/hmd.png]]
    家庭用ゲーム機をプレイする際に、シースルー型のHMDを装着することで、
    TV画面外にもエフェクトを表示し、もっと楽しくゲームをプレイできる仕組みを作りました
-   This system that enhances gaming experience for off-line-console gamers. This system displays common scene for all players on a shared monitor, and it displays player-specific information on each player’s see-through head-mounted display (HMD). 
+   This system that enhances gaming experience for off-line-console gamers. This system displays common scene for all players on a shared monitor, and it displays player-specific information on each player’s see-through head-mounted display (HMD).
    https://bit.ly/2LajDTe
 
-* Using Keyboard
-  - [[http://www.pfu.fujitsu.com/hhkeyboard/bt/][HHKB Professional BT]]
-  - [[http://eucalyn.hatenadiary.jp/entry/about-mint60-01][Mint60]]
+   *使用技術*
+   Unity, C#, Kinect, AR
+
+** 入れ替えても読めちゃうBot (2013)
+   #+attr_html: :width 100% :style margin-left: auto; margin-right: auto;
+   [[file:./images/twitterbot.png]]
+   Typoglycemiaという、
+   単語を構成する文字を並べ替えても、
+   最初と最後の文字が合っていれば読めてしまう仕組みを使ったTwitterのBotを作りました。
+
+   *使用技術:*
+   Java, 形態素解析(MeCab), GAE(GoogleApp Engine :width 100% 
 
 
