@@ -79,6 +79,4 @@
    最初と最後の文字が合っていれば読めてしまう仕組みを使ったTwitterのBotを作りました。
 
    *使用技術:*
-   Java, 形態素解析(MeCab), GAE(GoogleApp Engine :width 100% :height 200px 
-
-
+   Java, 形態素解析(MeCab), GAE(GoogleApp Engine)

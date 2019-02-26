@@ -59,15 +59,16 @@ a:hover { color: #3b4252; }
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 1rem;
     width: 100%;
 }
 
 .outline-2 h2{
+    margin-left: 1rem;
     width: 100%;
 }
 
 .outline-2 .outline-text-2{
+    margin-left: 2rem;
     width: 100%;
 }
 
