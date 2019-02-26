@@ -11,11 +11,11 @@
 
 * About me
   *梶山 隼(Hayato KAJIYANA)*
-  東京工科大学大学院でコンピュータサイエンス修士号を取得しています。専攻はHCIでした。
-  今はソフトバンク株式会社というところで社内システム(主に在庫管理)の開発を行っています。
+  東京工科大学大学院でコンピュータサイエンス修士号を取得しています。専攻はHCI。
+  今はソフトバンク株式会社で社内システム(主に在庫管理)の開発を行っています。
   技術を軸に、その時その時に興味のあることに集中して取り組むのが好きです。
 
-  何かご連絡がある際は下記まで。
+  何かご用がある際は下記まで。
   hyakt0[at]gmail.com
 
 * Product & Research
@@ -49,9 +49,9 @@
 
 ** SHAPIO: Shape I/O Controller for Video Games (2015)
    #+HTML: <iframe width="100%" height="210" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   「テレビゲームの面白さは使用するコントローラによって変化する」という根拠に基づき、
-   テレビゲーム内のシチュエーションに合わせて、変形するコントローラを作成し評価しました。
-   CHIPLAY 2015で発表しました。
+   「コントローラの形状とテレビゲーム内のアイテムの形状が一致した際に楽しさが向上する」という根拠に基づき、
+   ゲーム内のシチュエーションに合わせて、変形するコントローラを作成し評価しました。
+   *ACM CHIPLAY 2015 に論文投稿しました。*
    A game controller that inputs and outputs game events through its three-dimensional shape.
    https://dl.acm.org/citation.cfm?id=2810318
 
@@ -65,8 +65,8 @@
    [[file:./images/hmd.png]]
    家庭用ゲーム機をプレイする際に、シースルー型のHMDを装着することで、
    TV画面外にもエフェクトを表示し、もっと楽しくゲームをプレイできる仕組みを作りました
-   This system that enhances gaming experience for off-line-console gamers. This system displays common scene for all players on a shared monitor, and it displays player-specific information on each player’s see-through head-mounted display (HMD).
-   https://bit.ly/2LajDTe
+   This system that enhances gaming experience for off-line-console gamers. This system displays common scene for all players on a shared monitor, and it displays player-specific information on each player’s see-through head-mounted display.
+   https://ci.nii.ac.jp/naid/110009861131/
 
    *使用技術*
    Unity, C#, Kinect, AR

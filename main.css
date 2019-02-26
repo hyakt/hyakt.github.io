@@ -50,6 +50,10 @@ a:hover { color: #3b4252; }
     font-size: 1.2rem;
 }
 
+.header .sns a:hover{
+    color: var(--bg);
+}
+
 .header .sns .item {
     margin: 0;
     padding: 0 1rem 0 1rem;
@@ -63,17 +67,16 @@ a:hover { color: #3b4252; }
 }
 
 .outline-2 h2{
-    margin-left: 1rem;
+    margin: 1rem;
     width: 100%;
 }
 
 .outline-2 .outline-text-2{
-    margin-left: 2rem;
+    margin: 0 2rem;
     width: 100%;
 }
 
 .outline-3 {
-    box-sizing: border-box;
     width: 400px;
     margin: 1rem .25em;
     background: #ffffff;
@@ -81,12 +84,16 @@ a:hover { color: #3b4252; }
 }
 
 .outline-3 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     color: var(--fg-title);
     background: var(--fg-h3);
     padding: 1rem;/*文字周りの余白*/
     height: 5rem;
     text-align: center;
+    border-radius: 3px 3px 0 0;
 }
 
 .outline-3 img {
@@ -94,7 +101,7 @@ a:hover { color: #3b4252; }
 }
 
 .outline-3 .outline-text-3 {
-    padding: 1rem;/*文字周りの余白*/
+    padding: 1rem;
 }
 
 .status {
