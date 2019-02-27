@@ -4,7 +4,7 @@
 #+AUTHOR: Hayato KAJIYAMA
 #+TITLE: I'm Hayato KAJIYAMA
 #+EMAIL: hyakt0@gmail.com
-#+HTML_HEAD: <meta name="description" content="梶山 隼 (Hayato KAJIYAMA) のプロフィールページ">
+#+HTML_HEAD: <meta name="description" content="Hayato KAJIYAMA (梶山 隼)'s portfolio.>
 #+HTML_HEAD: <meta charset="utf-8">
 #+HTML_HEAD: <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./src/main.css"/>
@@ -14,7 +14,7 @@
 #+INCLUDE: "./src/header.html" header
 
 * About me
-  *梶山 隼(Hayato KAJIYANA)*
+  *Hayato KAJIYAMA (梶山 隼)*
   東京工科大学大学院でコンピュータサイエンス修士号を取得しています。専攻はHCI。
   今はソフトバンク株式会社で社内システム(主に在庫管理)の開発を行っています。
   技術を軸に、その時その時に興味のあることに集中して取り組むのが好きです。
@@ -24,7 +24,7 @@
 
 * Product & Research
 ** Hackernews on Emacs Dashboard (2018)
-   #+attr_html: :width 100% :height 200px :style object-fit: cover :class img-zoomable
+   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/emacs-dashboard.png]]
    Hacker Newsを表示するEmacs Dashboard用のプラグインを作成しました。
    This is a plugin for the Emacs Dashboard.
@@ -35,7 +35,7 @@
    EmacsLisp
 
 ** Hugo Theme (2017)
-   #+attr_html: :width 100% :height 200px :style object-fit: cover :class img-zoomable
+   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/hugo.png]]
    ブログジェネレータ[[https://gohugo.io/][Hugo]]の明るいテーマを作成しました。
    https://github.com/hyakt/hugo-theme-pleasure
@@ -44,7 +44,7 @@
    HTML, Stylus(CSS), Netrify
 
 ** この本いつ発売したっけBot (2017)
-   #+attr_html: :width 100% :height 200px :style object-fit: cover :class img-zoomable
+   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/linebot1.png]]
    LineBotのハンズオンで本の最新巻がいつ発売されたか教えてくれるLineのBotを作成しました。
 
@@ -65,7 +65,7 @@
    - ソフトウェア（ゲーム）: Unity, C#
 
 ** Enhancing Gaming Experience System Using See-Through HMD (2014)
-   #+attr_html: :width 100% :height 200px :style object-fit: cover :class img-zoomable
+   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/hmd.png]]
    家庭用ゲーム機をプレイする際に、シースルー型のHMDを装着することで、
    TV画面外にもエフェクトを表示し、もっと楽しくゲームをプレイできる仕組みを作りました
@@ -76,7 +76,7 @@
    Unity, C#, Kinect, AR
 
 ** 入れ替えても読めちゃうBot (2013)
-   #+attr_html: :width 100% :height 200px :style object-fit: cover :class img-zoomable
+   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/twitterbot.png]]
    Typoglycemiaという、
    単語を構成する文字を並べ替えても、
