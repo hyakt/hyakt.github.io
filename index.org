@@ -2,9 +2,9 @@
 #+OPTIONS: ^:nil \n:t toc:nil num:nil html-style:nil TeX:nil title:nil
 #+LANGUAGE: en
 #+AUTHOR: Hayato KAJIYAMA
-#+TITLE: I'm Hayato KAJIYAMA
+#+TITLE: 梶山 隼 (Hayato KAJIYAMA) - Portfolio
 #+EMAIL: hyakt0@gmail.com
-#+HTML_HEAD: <meta name="description" content="Hayato KAJIYAMA (梶山 隼)'s portfolio.>
+#+HTML_HEAD: <meta name="description" content="ソフトウェアエンジニアとして働く、梶山 隼 (Hayato KAJIYAMA) のポートフォリオサイト">
 #+HTML_HEAD: <meta charset="utf-8">
 #+HTML_HEAD: <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./src/main.css"/>
