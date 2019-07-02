@@ -62,27 +62,30 @@ a:hover { color: #3b4252; }
 }
 
 .outline-2 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
+    display: grid;
+    grid-gap: 0.4rem;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(400px, 1fr)
+    );
 }
 
 .outline-2 h2{
     margin: 1rem;
-    width: 100%;
+    grid-column: 1 / -1;
 }
 
 .outline-2 .outline-text-2{
-    margin: 0 2rem;
-    width: 100%;
-}
+    margin: 0 1rem;
+    grid-column: 1 / -1;
+ }
 
 .outline-3 {
     width: 400px;
-    margin: 1rem .25em;
+    margin: 1rem .25rem;
     background: #ffffff;
     border-radius: 3px;
+    justify-self: center;
 }
 
 .outline-3 h3 {
@@ -92,7 +95,7 @@ a:hover { color: #3b4252; }
     margin: 0;
     color: var(--fg-title);
     background: var(--fg-h3);
-    padding: 1rem;/*文字周りの余白*/
+    padding: 1rem;
     height: 5rem;
     text-align: center;
     border-radius: 3px 3px 0 0;
