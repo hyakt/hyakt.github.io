@@ -19,7 +19,7 @@
   技術好きですが必要ベース派です
 
 * Product
-** expo-multiple-media-imagepicker (2019)
+** expo-multiple-media-imagepicker (2019)                               :oss:
    #+attr_html: :width 100% :height 600px :class img-zoomable :style object-fit: cover
    [[file:./images/expo-multiple-media-imagepicker.gif]]
    ExpoのMedia Libraryを利用した画像を複数枚選択できるReactNative用packageを作成しました
@@ -31,7 +31,7 @@
    *使用技術:*
    React Native, JavaScript
 
-** luna (2019)
+** luna (2019)                                                          :oss:
    #+attr_html: :width 100% :height 250px :class img-zoomable :style object-fit: cover
    [[file:./images/luna.gif]]
    シンプルなGit表示機能付きのfish shell promptを作りました
@@ -41,7 +41,7 @@
    *使用技術:*
    fish shell
 
-** emacs-dashboard-hackernews (2018)
+** emacs-dashboard-hackernews (2018)                                    :oss:
    #+attr_html: :width 100% :height 300px :class img-zoomable :style object-fit: cover
    [[file:./images/emacs-dashboard.png]]
    Hacker Newsを表示するEmacs Dashboard用のプラグインを作成しました。
@@ -52,7 +52,15 @@
    *使用技術:*
    Emacs Lisp
 
-** hugo-theme-pleasure (2017)
+** この本いつ発売したっけBot (2017)                                 :product:
+   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
+   [[file:./images/linebot1.png]]
+   本の最新巻がいつ発売されたか教えてくれるLineのBotを作成しました。
+
+   *使用技術:*
+   Node.js, Express, Google Books API, Now
+
+** hugo-theme-pleasure (2017) :oss:
    #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/hugo.png]]
    ブログジェネレータ[[https://gohugo.io/][Hugo]]の明るいテーマを作成しました。
@@ -61,15 +69,7 @@
    *使用技術:*
    HTML, Stylus(CSS), hugo
 
-** この本いつ発売したっけBot (2017)
-   #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
-   [[file:./images/linebot1.png]]
-   本の最新巻がいつ発売されたか教えてくれるLineのBotを作成しました。
-
-   *使用技術:*
-   Node.js, Express, Google Books API, Now
-
-** SHAPIO: Shape I/O Controller for Video Games (2015)
+** SHAPIO: Shape I/O Controller for Video Games (2015)             :research:
    #+HTML: <iframe width="100%" height="210" src="https://www.youtube.com/embed/PZH0wmR3WBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    「コントローラの形状とテレビゲーム内のアイテムの形状が一致した際に楽しさが向上する」という根拠に基づき、
    ゲーム内のシチュエーションに合わせて、変形するコントローラを作成し評価しました。
@@ -82,7 +82,7 @@
    - ミドルウェア： Swift, JavaScript
    - ソフトウェア（ゲーム）: Unity, C#
 
-** Enhancing Gaming Experience System Using See-Through HMD (2014)
+** Enhancing Gaming Experience System Using See-Through HMD (2014) :research:
    #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/hmd.png]]
    家庭用ゲーム機をプレイする際に、シースルー型のHMDを装着することで、
@@ -93,7 +93,7 @@
    *使用技術*
    Unity, C#, Kinect, AR
 
-** 入れ替えても読めちゃうBot (2013)
+** 入れ替えても読めちゃうBot (2013)                                 :product:
    #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
    [[file:./images/twitterbot.png]]
    Typoglycemiaという、

@@ -3,7 +3,7 @@
     --bg: #eceff4;
     --fg-title: #eceff4;
     --bg-title: #2e3440;
-    --fg-h3: #b48ead;
+    --fg-h3: #81A1C1;
 }
 
 body {
@@ -96,6 +96,10 @@ a:hover { color: #3b4252; }
     height: 5rem;
     text-align: center;
     border-radius: 3px 3px 0 0;
+}
+
+.outline-3 h3 .tag{
+    display: none
 }
 
 .outline-3 img {
