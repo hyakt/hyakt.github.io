@@ -1,0 +1,12 @@
+* Portfolio
+This is my portfolio repository.
+
+** contents
+   - index.org: Self-introduction and created the product
+   - privacy.org: privacy policiy for the myself app
+
+** how to make .html
+   1. Startup a Emacs
+   2. Open the file on the above
+   3. C-x C-e (org-export)
+   4. Export to html
