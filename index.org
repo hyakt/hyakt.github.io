@@ -19,6 +19,21 @@
   技術好きですが必要ベース派です
 
 * Product
+** regist (2019)                                                        :oss:
+   #+attr_html: :width 100% :height 800px :class img-zoomable :style object-fit: cover
+   [[file:./images/regist.png]]
+
+   #+HTML: <a href="https://apps.apple.com/us/app/regist/id1472456939?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2019-07-16&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
+   registはGithubのGistビューワーです.
+
+   機能
+   - Gistの作成と編集
+   - Gistとの同期
+   - 様々な言語に対応したシンタックスハイライト
+
+   *使用技術:*
+   React Native, React Hooks, Expo, Github API, JavaScript
+
 ** expo-multiple-media-imagepicker (2019)                               :oss:
    #+attr_html: :width 100% :height 600px :class img-zoomable :style object-fit: cover
    [[file:./images/expo-multiple-media-imagepicker.gif]]
@@ -29,7 +44,7 @@
    https://github.com/hyakt/expo-multiple-media-imagepicker
 
    *使用技術:*
-   React Native, JavaScript
+   React Native, Expo, JavaScript
 
 ** luna (2019)                                                          :oss:
    #+attr_html: :width 100% :height 250px :class img-zoomable :style object-fit: cover
@@ -54,7 +69,7 @@
 
 ** この本いつ発売したっけBot (2017)                                 :product:
    #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
-   [[file:./images/linebot1.png]]
+   [[file:./images/linebot.png]]
    本の最新巻がいつ発売されたか教えてくれるLineのBotを作成しました。
 
    *使用技術:*
@@ -91,7 +106,7 @@
    https://ci.nii.ac.jp/naid/110009861131/
 
    *使用技術*
-   Unity, C#, Kinect, AR
+   Unity, C#, Kinect, Python, Vuforia
 
 ** 入れ替えても読めちゃうBot (2013)                                 :product:
    #+attr_html: :width 100% :height 200px :class img-zoomable :style object-fit: cover
