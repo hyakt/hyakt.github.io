@@ -19,7 +19,7 @@
   技術好きですが必要ベース派です
 
 * Product
-** regist (2019)                                                        :oss:
+** regist (2019)                                                        :product:
    #+attr_html: :width 100% :height 800px :class img-zoomable :style object-fit: cover
    [[file:./images/regist.png]]
 
