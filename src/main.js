@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     scaleExtra: 2
   }).listen('.img-zoomable')
 
-  const productColor = '#EBCB8B'
-  const ossColor = '#B48EAD'
-  const researchColor = '#A3BE8C'
+  const productColor = '#78dce8'
+  const ossColor = '#fc9867'
+  const researchColor = '#ff6188'
 
   Array.prototype.forEach.call(document.getElementsByClassName('tag'), (t) => {
     const tag = t.childNodes[0]

@@ -1,9 +1,11 @@
 :root{
-    --fg: #3b4252;
-    --bg: #eceff4;
-    --fg-title: #eceff4;
-    --bg-title: #2e3440;
-    --fg-h3: #81A1C1;
+    --fg: #fdf9f3;
+    --bg: #2c292d;
+    --fg-title: #fdf9f3;
+    --bg-title: #2c292d;
+    --fg-h3: #ff6188;
+    --a-link: #a9dc76;
+    --a-hover: #ffd866;
 }
 
 body {
@@ -14,9 +16,9 @@ body {
     background: var(--bg);
 }
 
-a:link { color: #81a1c1; }
-a:visited { color: #81a1c1; }
-a:hover { color: #3b4252; }
+a:link { color: var(--a-link); }
+a:visited { color: var(--a-link); }
+a:hover { color: var(--a-hover); }
 
 .header {
     margin: 0;
@@ -53,7 +55,7 @@ a:hover { color: #3b4252; }
 }
 
 .header .sns a:hover{
-    color: var(--bg);
+    color: var(--a-hover);
 }
 
 .header .sns .item {
@@ -83,7 +85,7 @@ a:hover { color: #3b4252; }
 .outline-3 {
     width: 400px;
     margin: 1rem .25rem;
-    background: #ffffff;
+    background: var(--fg);
     border-radius: 3px;
     justify-self: center;
 }
@@ -93,7 +95,7 @@ a:hover { color: #3b4252; }
     justify-content: center;
     align-items: center;
     margin: 0;
-    color: var(--fg-title);
+    color: var(--bg);
     background: var(--fg-h3);
     padding: 1rem;
     height: 5rem;
@@ -110,6 +112,7 @@ a:hover { color: #3b4252; }
 }
 
 .outline-3 .outline-text-3 {
+    color: var(--bg);
     padding: 1rem;
 }
 
