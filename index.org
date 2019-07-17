@@ -59,6 +59,7 @@
 ** emacs-dashboard-hackernews (2018)                                    :oss:
    #+attr_html: :width 100% :height 300px :class img-zoomable :style object-fit: cover
    [[file:./images/emacs-dashboard.png]]
+   [[https://melpa.org/#/dashboard-hackernews][file:https://melpa.org/packages/dashboard-hackernews-badge.svg]]
    Hacker Newsを表示するEmacs Dashboard用のプラグインを作成しました。
    This is a plugin for the Emacs Dashboard.
    Display a topstories of Hacker News on Dashboard.
