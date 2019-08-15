@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `hyakt.dev`,
-    description: `My portfolio.`,
-    author: `@hyakt`,
+    title: 'hyakt.dev',
+    description: 'Software engineer ♥ Emacs, Web, HCI and 🍺',
+    author: 'Hayato KAJIYAMA',
+    url: 'https://hyakt.dev',
+    icon: 'https://www.gravatar.com/avatar/d9618150777ac86730044bb6de049016?s=130',
+    github: 'https://github.com/hyakt/',
+    twitter: 'https://twitter.com/hyakt0/',
+    linkedin: 'https://www.linkedin.com/in/hyakt/',
+    facebook: 'https://www.facebook.com/hyakt0/',
+    mail: 'hyakt0@gmail.com'
   },
   plugins: [
     {
