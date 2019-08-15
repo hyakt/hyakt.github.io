@@ -1,7 +1,7 @@
 {
-  "name": "hyakt.github.io",
+  "name": "hyakt.dev",
   "private": true,
-  "description": "My portfolio.",
+  "description": "portfolio site",
   "version": "0.0.1",
   "author": "Hayato KAJIYAMA <hyakt0@gmail.com>",
   "scripts": {
@@ -53,9 +53,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/hyakt/hyakt.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/hyakt/hyakt.github.io/issues"
   }
 }
