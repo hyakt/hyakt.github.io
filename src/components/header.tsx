@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from "@emotion/core"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Social from './social'
 import Colors from '../constants/Colors'
 
 export default () => {
@@ -54,6 +55,7 @@ export default () => {
 
   return (
     <header css={styles.header}>
+      <Social />
       <div css={styles.container}>
         <div>
           <img css={styles.icon} src={data.site.siteMetadata.icon} />
