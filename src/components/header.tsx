@@ -20,39 +20,53 @@ export default () => {
   )
 
   const styles = {
+    header: css({
+    }),
     container: css({
-      padding: '2rem',
+      display: 'flex',
       height: '20rem',
-      width: '100%',
-      backgroundColor: Colors.bubbles
+      backgroundColor: Colors.bubbles,
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignContent: 'center',
+      justifyItems: 'center'
     }),
     icon: css({
+      display:'block',
+      margin: 'auto',
       borderRadius: '130px'
+    }),
+    title: css({
+      marginTop: '1rem',
+      fontSize: '2rem',
+      fontWeight: 'bold',
+      textAlign: 'center'
+    }),
+    subtitle: css({
+      marginTop: '1rem'
     }),
     wave: css({
       fill: Colors.bubbles,
-      width: '100%',
-      height: '6rem'
+      height: '6rem',
+      width: '100%'
     })
   }
 
-  const wave = css`
-    fill: ${Colors.bubbles};
-    width: 100%;
-    height: 6rem;
-  `
-
   return (
-    <header>
+    <header css={styles.header}>
       <div css={styles.container}>
-        <h1>
-          {data.site.siteMetadata.author}
-        </h1>
-        {data.site.siteMetadata.description}
-        <img css={styles.icon} src={data.site.siteMetadata.icon} />
+        <div>
+          <img css={styles.icon} src={data.site.siteMetadata.icon} />
+          <h1 css={styles.title}>
+            {data.site.siteMetadata.author}
+          </h1>
+          <p css={styles.subtitle}>
+            {data.site.siteMetadata.description}
+          </p>
+        </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg"
-           css={wave}
+           css={styles.wave}
            viewBox="0 0 54 14"
            preserveAspectRatio="none"
            aria-hidden="true"
