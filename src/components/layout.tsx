@@ -1,8 +1,14 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState} from "react"
 import { Global, css } from "@emotion/core"
 import emotionReset from 'emotion-reset'
 
-export default ({ children }) => {
+import Colors from '../constants/Colors'
+
+interface LayoutProps {
+  children: any
+}
+
+const Layout = (props: LayoutProps) => {
   const [scrolled, setScrolled] = useState(0);
 
   useEffect(() => {
@@ -15,7 +21,7 @@ export default ({ children }) => {
 
   const background = css`
     position: fixed;
-    background: #F2F2F2;
+    background: ${Colors.bubbles};
     height: ${scrolled}%;
     width: 100%;
     z-index: -1;
@@ -23,7 +29,7 @@ export default ({ children }) => {
   const wave = css`
     position: fixed;
     top: ${scrolled}%;
-    fill: #F2F2F2;
+    fill: ${Colors.bubbles};
     width: 100%;
     height: 6rem;
   `
@@ -45,9 +51,10 @@ export default ({ children }) => {
         </svg>
       </div>
       <div>
-        <main>{children}</main>
+        <main>{props.children}</main>
       </div>
     </>
   )
 }
 
+export default Layout
