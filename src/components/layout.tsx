@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from "react"
 import { Global, css } from "@emotion/core"
 import emotionReset from 'emotion-reset'
+import { throttle } from 'lodash';
 
 import Colors from '../constants/Colors'
 
@@ -12,12 +13,14 @@ const Layout = (props: LayoutProps) => {
   const [scrolled, setScrolled] = useState(0);
 
   useEffect(() => {
-    window.onscroll = () => {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      setScrolled((winScroll / height) * 100)
-    }
-  })
+    window.addEventListener('scroll', throttle(scrollCallback, 500))
+  }, [])
+
+  const scrollCallback = () => {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    setScrolled((winScroll / height) * 100)
+  }
 
   const background = css`
     position: fixed;
@@ -25,6 +28,7 @@ const Layout = (props: LayoutProps) => {
     height: ${scrolled}%;
     width: 100%;
     z-index: -1;
+    transition: 1s;
   `
   const wave = css`
     position: fixed;
@@ -32,6 +36,7 @@ const Layout = (props: LayoutProps) => {
     fill: ${Colors.bubbles};
     width: 100%;
     height: 6rem;
+    transition: 1s;
   `
   return (
     <>
