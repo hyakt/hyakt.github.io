@@ -55,7 +55,6 @@ export default () => {
 
   return (
     <header css={styles.header}>
-      <Social />
       <div css={styles.container}>
         <div>
           <img css={styles.icon} src={data.site.siteMetadata.icon} />
@@ -65,6 +64,9 @@ export default () => {
           <p css={styles.subtitle}>
             {data.site.siteMetadata.description}
           </p>
+          <div css={styles.subtitle}>
+            <Social />
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg"

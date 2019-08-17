@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react"
 import { Global, css } from "@emotion/core"
 import emotionReset from 'emotion-reset'
-import { throttle } from 'lodash';
+import { throttle } from 'lodash'
 
 import Colors from '../constants/Colors'
 
@@ -28,6 +28,10 @@ const Layout = (props: LayoutProps) => {
       border: 1rem solid ${Colors.bubbles};
       color: ${Colors.fg};
     }
+    a:link { color: ${Colors.fg}; }
+    a:visited { color: ${Colors.fg}; }
+    a:hover { color: ${Colors.fg}; }
+    a:active { color: ${Colors.fg}; }
   `
   const background = css`
     position: fixed;

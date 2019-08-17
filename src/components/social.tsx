@@ -1,7 +1,9 @@
 import React from 'react'
+import { css } from "@emotion/core"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { useStaticQuery, graphql } from "gatsby"
+import { faGithub, faTwitter, faLinkedin, faFacebook  } from '@fortawesome/free-brands-svg-icons'
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Colors from '../constants/Colors'
 
 export default () => {
   const data = useStaticQuery(
@@ -21,13 +23,42 @@ export default () => {
     `
   )
 
+  const styles = {
+    container: css({
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignContent: 'center',
+      justifyItems: 'center'
+    }),
+    iconLink: css({
+      margin: '0 0.2rem',
+      display: 'block',
+      width: '1.5rem',
+      height: '1.5rem',
+      background: Colors.bubbles,
+      borderRadius: '1rem',
+      boxShadow: '2px 2px 4px gray'
+    }),
+    icon: css({
+      padding: '0.25rem'
+    })
+  }
+
   return (
-    <div>
-      { Object.keys(data.site.siteMetadata.socials).map((e: string) =>
-        {
-          return <FontAwesomeIcon icon={faTwitter} />
-        })
-      }
+    <div css={styles.container}>
+      <a href={data.site.siteMetadata.socials.github} css={styles.iconLink}>
+        <FontAwesomeIcon icon={faGithub} css={styles.icon} />
+      </a>
+      <a href={data.site.siteMetadata.socials.twitter} css={styles.iconLink}>
+        <FontAwesomeIcon icon={faTwitter} css={styles.icon} />
+      </a>
+      <a href={data.site.siteMetadata.socials.linkedin} css={styles.iconLink}>
+        <FontAwesomeIcon icon={faLinkedin} css={styles.icon} />
+      </a>
+      <a href={data.site.siteMetadata.socials.facebook} css={styles.iconLink}>
+        <FontAwesomeIcon icon={faFacebook} css={styles.icon} />
+      </a>
     </div>
   )
 
