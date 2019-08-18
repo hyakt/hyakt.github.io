@@ -32,7 +32,7 @@ export default () => {
       justifyItems: 'center'
     }),
     iconLink: css({
-      margin: '0 0.2rem',
+      margin: '0 0.4rem',
       display: 'block',
       width: '1.5rem',
       height: '1.5rem',
