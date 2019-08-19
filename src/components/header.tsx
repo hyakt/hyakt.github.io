@@ -40,11 +40,11 @@ export default () => {
     title: css({
       marginTop: '1rem',
       fontSize: '2rem',
-      fontWeight: 'bold',
-      textAlign: 'center'
+      textAlign: 'center',
     }),
     subtitle: css({
-      marginTop: '1rem'
+      marginTop: '1rem',
+      fontWeight: '400'
     }),
     wave: css({
       fill: Colors.bubbles,
@@ -61,9 +61,9 @@ export default () => {
           <h1 css={styles.title}>
             {data.site.siteMetadata.author}
           </h1>
-          <p css={styles.subtitle}>
+          <h2 css={styles.subtitle}>
             {data.site.siteMetadata.description}
-          </p>
+          </h2>
           <div css={styles.subtitle}>
             <Social />
           </div>

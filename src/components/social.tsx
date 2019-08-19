@@ -41,6 +41,7 @@ export default () => {
       boxShadow: '2px 2px 4px gray'
     }),
     icon: css({
+      fontSize: '1.5rem',
       padding: '0.25rem'
     })
   }

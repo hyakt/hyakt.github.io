@@ -4,14 +4,20 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    'Avenir Next',
-    'Helvetica Neue',
-    'Segoe UI',
-    'Helvetica',
-    'Arial',
+    'Montserrat',
     'sans-serif'
   ],
-  bodyFontFamily: ['Georgia', 'serif'],
+  bodyFontFamily: ['Noto Sans JP', 'Georgia', 'serif'],
+  googleFonts: [
+    {
+      name: 'Montserrat',
+      styles: ['300', '400', '500', '700', '900']
+    },
+    {
+      name: 'Noto Sans JP',
+      styles: ['300', '400', '500', '700', '900']
+    }
+  ]
 })
 
 export default typography
