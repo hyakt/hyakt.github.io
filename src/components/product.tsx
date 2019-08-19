@@ -23,7 +23,7 @@ export default () => {
     query {
       regist: file(relativePath: { eq: "product/regist.png" }) {
         childImageSharp {
-          fixed(width: 300) {
+          fixed(width: 300, height: 300) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -70,11 +70,24 @@ export default () => {
   const styles = {
     container: css({
       display: 'grid',
-      gridGap: rhythm(3),
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 350px))',
+      gridGap: rhythm(2),
+      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 300px))',
       justifyContent: 'center',
       margin: 'auto',
       maxWidth: 1200,
+    }),
+    productContainer: css({
+      width: '300px',
+      height: '300px',
+    }),
+    name: css({
+      position: 'absolute'
+    }),
+    image: css({
+      objectFit: 'cover',
+      borderRadius: '150px',
+      background: Colors.bubbles,
+      boxShadow: '2px 2px 4px gray'
     })
   }
 
@@ -84,7 +97,10 @@ export default () => {
       <div css={styles.container}>
         {products.map((p: Product) => {
           return (
-            <Img fixed={p.image} />
+            <div css={styles.productContainer}>
+              <h3 css={styles.name}>{p.name}</h3>
+              <Img css={styles.image} fixed={p.image} />
+            </div>
           )
         })}
       </div>
