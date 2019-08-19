@@ -1,5 +1,7 @@
 import React, { useEffect, useState} from "react"
 import { Global, css } from "@emotion/core"
+import styled from '@emotion/styled'
+
 import { throttle } from 'lodash'
 
 import Colors from '../constants/Colors'
@@ -34,95 +36,95 @@ const Layout = (props: LayoutProps) => {
     aarticle, aside, canvas, details, figcaption, figure,
     footer, header, hgroup, menu, nav, section, summary,
     time, mark, audio, video {
-        margin:0;
-        padding:0;
-        border:0;
-        outline:0;
-        font-size:100%;
-        vertical-align:baseline;
-        background:transparent;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
     }
 
     body {
-        line-height:1;
+    line-height:1;
     }
 
     article,aside,details,figcaption,figure,
     footer,header,hgroup,menu,nav,section {
-        display:block;
+    display:block;
     }
 
     nav ul {
-        list-style:none;
+    list-style:none;
     }
 
     blockquote, q {
-        quotes:none;
+    quotes:none;
     }
 
     blockquote:before, blockquote:after,
     q:before, q:after {
-        content:'';
-        content:none;
+    content:'';
+    content:none;
     }
 
     a {
-        margin:0;
-        padding:0;
-        font-size:100%;
-        vertical-align:baseline;
-        background:transparent;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
     }
 
     /* change colours to suit your needs */
     ins {
-        background-color:#ff9;
-        color:#000;
-        text-decoration:none;
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
     }
 
     /* change colours to suit your needs */
     mark {
-        background-color:#ff9;
-        color:#000;
-        font-style:italic;
-        font-weight:bold;
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
     }
 
     del {
-        text-decoration: line-through;
+    text-decoration: line-through;
     }
 
     abbr[title], dfn[title] {
-        border-bottom:1px dotted;
-        cursor:help;
+    border-bottom:1px dotted;
+    cursor:help;
     }
 
     table {
-        border-collapse:collapse;
-        border-spacing:0;
+    border-collapse:collapse;
+    border-spacing:0;
     }
 
     /* change border colour to suit your needs */
     hr {
-        display:block;
-        height:1px;
-        border:0;
-        border-top:1px solid #cccccc;
-        margin:1em 0;
-        padding:0;
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
     }
 
     input, select {
-        vertical-align:middle;
+    vertical-align:middle;
     }
   `
 
   const global = css`
-  body {
-      background: ${Colors.bubbles};
-      border: 1rem solid ${Colors.bubbles};
-      color: ${Colors.fg};
+    body {
+    background: ${Colors.bubbles};
+    border: 1rem solid ${Colors.bubbles};
+    color: ${Colors.fg};
     }
     a:link { color: ${Colors.fg}; }
     a:visited { color: ${Colors.fg}; }
@@ -139,13 +141,13 @@ const Layout = (props: LayoutProps) => {
     transition: 1s;
   `
   const wave = css`
-  position: fixed;
-  bottom: ${100 - scrolled}%;
-  fill: ${Colors.paleale};
-  width: 100%;
-  height: 6rem;
-  transition: 1s;
-  transform: scale(-1, -1);
+    position: fixed;
+    bottom: ${100 - scrolled}%;
+    fill: ${Colors.paleale};
+    width: 100%;
+    height: 6rem;
+    transition: 1s;
+    transform: scale(-1, -1);
   `
   return (
     <>
