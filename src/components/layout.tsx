@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import { throttle } from 'lodash'
 
 import Colors from '../constants/Colors'
+import { rhythm } from '../utils/typography'
 
 interface LayoutProps {
   children: any
@@ -18,8 +19,8 @@ const Layout = (props: LayoutProps) => {
   }, [])
 
   const scrollCallback = () => {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     setScrolled((winScroll / height) * 100)
   }
 
@@ -145,7 +146,7 @@ const Layout = (props: LayoutProps) => {
     bottom: ${100 - scrolled}%;
     fill: ${Colors.paleale};
     width: 100%;
-    height: 6rem;
+    height: ${rhythm(3)};
     transition: 1s;
     transform: scale(-1, -1);
   `

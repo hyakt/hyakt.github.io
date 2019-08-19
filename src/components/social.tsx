@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faLinkedin, faFacebook  } from '@fortawesome/free-brands-svg-icons'
 import { useStaticQuery, graphql, Link } from "gatsby"
+
 import Colors from '../constants/Colors'
 
 export default () => {

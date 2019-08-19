@@ -1,6 +1,8 @@
 import React from 'react'
 import { css } from "@emotion/core"
 
+import { rhythm } from '../utils/typography'
+
 interface Props {
   title: string
 }
@@ -8,6 +10,8 @@ interface Props {
 export default (props: Props) => {
   const styles = {
     header: css({
+      marginTop: rhythm(1),
+      marginBottom: rhythm(1),
       fontSize: '1.5rem',
       textAlign: 'center'
     })

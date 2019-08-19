@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Social from './social'
 import Colors from '../constants/Colors'
+import { rhythm } from '../utils/typography'
 
 export default () => {
   const data = useStaticQuery(
@@ -25,7 +26,7 @@ export default () => {
     }),
     container: css({
       display: 'flex',
-      height: '20rem',
+      height: rhythm(14),
       backgroundColor: Colors.bubbles,
       justifyContent: 'center',
       alignItems: 'center',
@@ -38,17 +39,20 @@ export default () => {
       borderRadius: '130px'
     }),
     title: css({
-      marginTop: '1rem',
+      marginTop: rhythm(0.5),
       fontSize: '2rem',
       textAlign: 'center',
     }),
     subtitle: css({
-      marginTop: '1rem',
+      marginTop: rhythm(0.5),
       fontWeight: '400'
+    }),
+    social: css({
+      marginTop: rhythm(0.5)
     }),
     wave: css({
       fill: Colors.bubbles,
-      height: '6rem',
+      height: rhythm(3),
       width: '100%'
     })
   }
@@ -64,7 +68,7 @@ export default () => {
           <h2 css={styles.subtitle}>
             {data.site.siteMetadata.description}
           </h2>
-          <div css={styles.subtitle}>
+          <div css={styles.social}>
             <Social />
           </div>
         </div>
