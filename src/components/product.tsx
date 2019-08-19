@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from "@emotion/core"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SectionHeader from './sectionheader'
 import Colors from '../constants/Colors'
 
 export default () => {
@@ -24,7 +25,7 @@ export default () => {
 
   return (
     <>
-      <h2 css={styles.header}>Product</h2>
+      <SectionHeader title='Product'/>
       <div></div>
     </>
   )
