@@ -1,34 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import Header from '../components/header'
+import Product from '../components/product'
+import Footer from '../components/footer'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
     <Header />
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br /><br />
+    <Product />
+    <SEO title='Home' />
     <br />
     <br />
     <br />
@@ -42,7 +25,6 @@ const IndexPage = () => (
     <br />
     <br />
     <br />
-    <br /><br />
     <br />
     <br />
     <br />
@@ -56,7 +38,6 @@ const IndexPage = () => (
     <br />
     <br />
     <br />
-    <br /><br />
     <br />
     <br />
     <br />
@@ -67,9 +48,7 @@ const IndexPage = () => (
     <br />
     <br />
     <br />
-    <br />    <br />
     <br />
-    <br /><br />
     <br />
     <br />
     <br />
@@ -145,9 +124,20 @@ const IndexPage = () => (
     <br />
     <br />
     <br />
+    <br />    <br />
     <br />
-
-    <Link to="/page-2/">Go to page 2</Link>
+    <br /><br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <Footer />
   </Layout>
 )
