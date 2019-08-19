@@ -107,7 +107,7 @@ export default () => {
   const styles = {
     container: css({
       display: 'grid',
-      gridGap: rhythm(2),
+      gridGap: rhythm(1),
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 250px))',
       justifyContent: 'center',
       margin: 'auto',
@@ -123,7 +123,7 @@ export default () => {
       height: '100%',
       border: `0.2rem solid ${Colors.bubbles}`,
       borderRadius: '125px',
-      overflow: 'hidden'
+      overflow: 'hidden',
     }),
     name: css({
       position: 'absolute',
@@ -135,7 +135,8 @@ export default () => {
     image: css({
       borderRadius: '125px',
       filter: 'brightness(60%)',
-      margin: '-1px'
+      margin: '-1px',
+      ':hover': css({ filter: 'brightness(100%)' })
     })
   }
 
