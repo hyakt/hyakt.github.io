@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Section from '../components/Section'
 import ProductCard from '../components/ProductCard'
-import Colors from '../constants/Colors'
+
 import { rhythm } from '../utils/typography'
 import { Product } from '../utils/types'
 
@@ -77,7 +77,7 @@ export default () => {
       date: new Date(2019, 7, 1),
       description: 'ReactNativeで作成したiOS用のGistビューア',
       tags: ['ReactNative', 'expo', 'Github API', 'JavaScript', 'Sentry'],
-      badge: <a href="https://apps.apple.com/us/app/regist/id1472456939?mt=8"><object type="image/svg+xml" data="https://linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/appstore-sm.svg">Sorry, your browser does not support SVG.</object></a>
+      badge: <a href="https://apps.apple.com/us/app/regist/id1472456939?mt=8"><img src="https://linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/appstore-sm.svg" alt="appstore" height="18" /></a>
     },
     {
       name: 'expo-multiple-media-imagepicker',
@@ -85,7 +85,7 @@ export default () => {
       date: new Date(2019, 6, 1),
       description: 'expoのMediaLibraryを利用した、複数選択可能なimagepicker',
       tags: ['ReactNative', 'expo', 'JavaScript'],
-      badge: <a href="https://badge.fury.io/js/expo-multiple-media-imagepicker"><object type="image/svg+xml" data="https://badge.fury.io/js/expo-multiple-media-imagepicker.svg">Sorry, your browser does not support SVG.</object></a>,
+      badge: <a href="https://badge.fury.io/js/expo-multiple-media-imagepicker"><img src="https://badge.fury.io/js/expo-multiple-media-imagepicker.svg" alt="npm version" height="18" /></a>,
       github: 'https://github.com/hyakt/expo-multiple-media-imagepicker'
     },
     {
@@ -94,8 +94,7 @@ export default () => {
       date: new Date(2018, 12, 1),
       description: 'Hacker Newsを表示するEmacs Dashboard用のプラグイン',
       tags: ['Emacs lisp'],
-      badge: <a href="https://melpa.org/#/dashboard-hackernews"><object type="image/svg+xml" data="https://melpa.org/packages/dashboard-hackernews-badge.svg">
-        Sorry, your browser does not support SVG.</object></a>,
+      badge: <a href="https://melpa.org/#/dashboard-hackernews"><img src="https://melpa.org/packages/dashboard-hackernews-badge.svg" alt="melpa" height="18" /></a>,
       github: 'https://github.com/hyakt/emacs-dashboard-hackernews'
     },
     {
