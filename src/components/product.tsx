@@ -1,22 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
-import SectionHeader from './sectionheader'
+import SectionHeader from './SectionHeader'
+import ProductCard from './ProductCard'
 import Colors from '../constants/Colors'
 import { rhythm } from '../utils/typography'
-
-type Product = {
-  name: string,
-  date?: string,
-  description?: string,
-  techStack?: Array<string>,
-  badge?: string,
-  webpage?: string,
-  github?: string,
-  image?: any
-}
+import { Product } from '../utils/types'
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -69,6 +59,13 @@ export default () => {
             ...GatsbyImageSharpFixed
           }
         }
+      },
+      twitterbot: file(relativePath: { eq: "product/twitterbot.png" }) {
+        childImageSharp {
+          fixed(width: 250, height: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
     }
   `)
@@ -76,31 +73,70 @@ export default () => {
   const products: Array<Product> = [
     {
       name: 'regist',
-      image: data.regist.childImageSharp.fixed
+      image: data.regist.childImageSharp.fixed,
+      date: new Date(2019, 7, 1),
+      description: 'ReactNativeで作成したiOS用のGistビューア',
+      tags: ['ReactNative', 'expo', 'Github API', 'JavaScript', 'Sentry'],
+      badge: <a href="https://apps.apple.com/us/app/regist/id1472456939?mt=8"><object type="image/svg+xml" data="https://linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/appstore-sm.svg">Sorry, your browser does not support SVG.</object></a>
     },
     {
       name: 'expo-multiple-media-imagepicker',
-      image: data.picker.childImageSharp.fixed
+      image: data.picker.childImageSharp.fixed,
+      date: new Date(2019, 6, 1),
+      description: 'expoのMediaLibraryを利用した、複数選択可能なimagepicker',
+      tags: ['ReactNative', 'expo', 'JavaScript'],
+      badge: <a href="https://badge.fury.io/js/expo-multiple-media-imagepicker"><object type="image/svg+xml" data="https://badge.fury.io/js/expo-multiple-media-imagepicker.svg">Sorry, your browser does not support SVG.</object></a>,
+      github: 'https://github.com/hyakt/expo-multiple-media-imagepicker'
     },
     {
       name: 'emacs-dashboard-hackernews',
-      image: data.hackernews.childImageSharp.fixed
-    },
-    {
-      name: 'この本いつ発売したっけ?',
-      image: data.linebot.childImageSharp.fixed
+      image: data.hackernews.childImageSharp.fixed,
+      date: new Date(2018, 12, 1),
+      description: 'Hacker Newsを表示するEmacs Dashboard用のプラグイン',
+      tags: ['Emacs lisp'],
+      badge: <a href="https://melpa.org/#/dashboard-hackernews"><object type="image/svg+xml" data="https://melpa.org/packages/dashboard-hackernews-badge.svg">
+        Sorry, your browser does not support SVG.</object></a>,
+      github: 'https://github.com/hyakt/emacs-dashboard-hackernews'
     },
     {
       name: 'hugo-plesure-theme',
-      image: data.hugo.childImageSharp.fixed
+      image: data.hugo.childImageSharp.fixed,
+      date: new Date(2017, 11, 1),
+      description: 'ブログジェネレータHugo用の明るいテーマ',
+      tags: ['hugo', 'Stylus'],
+      github: 'https://github.com/hyakt/hugo-theme-pleasure'
+    },
+    {
+      name: 'この本いつ発売したっけ?',
+      image: data.linebot.childImageSharp.fixed,
+      date: new Date(2017, 8, 1),
+      description: '本の最新巻がいつ発売されたか教えてくれるLine用Bot',
+      tags: ['Node.js','Express','Google Books API','Now'],
+      github: 'https://github.com/hyakt/when-was-thisbook-published'
     },
     {
       name: 'SHAPIO',
-      image: data.shapio.childImageSharp.fixed
+      image: data.shapio.childImageSharp.fixed,
+      date: new Date(2016, 3, 1),
+      description: 'テレビゲーム内のシチュエーションに合わせて変形するコントローラ',
+      tags: ['Arduino', 'Servo', 'Potentiometer', 'BlueToothLowEnergy', 'Swift', 'JavaScript', 'Unity', 'C#'],
+      url: 'https://dl.acm.org/citation.cfm?id=2810318'
     },
     {
       name: 'Enhancing Gaming Experience System Using See-Through HMD ',
-      image: data.hmd.childImageSharp.fixed
+      image: data.hmd.childImageSharp.fixed,
+      date: new Date(2014, 3, 1),
+      description: 'テレビゲームをプレイする時に透過型のHMDを装着することでゲームの楽しさを向上するシステム',
+      tags: ['Unity', 'C#', 'Kinect', 'Python', 'Vuforia'],
+      url: 'https://ci.nii.ac.jp/naid/110009861131/'
+    },
+    {
+      name: '入れ替えても読めちゃうBot',
+      image: data.twitterbot.childImageSharp.fixed,
+      date: new Date(2014, 3, 1),
+      description: '単語ごとの文字を入れ替えた文章をリプライするTwitter用Bot',
+      tags: ['Java', 'MeCab', 'GoogleApp Engine'],
+      github: 'https://github.com/hyakt/CambridgeBot'
     }
   ]
 
@@ -110,33 +146,8 @@ export default () => {
       gridGap: rhythm(1),
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 250px))',
       justifyContent: 'center',
-      margin: 'auto',
+      margin: rhythm(1),
       maxWidth: 1200
-    }),
-    productContainer: css({
-      width: '250px',
-      height: '250px'
-    }),
-    productInner: css({
-      position: 'relative',
-      width: '100%',
-      height: '100%',
-      border: `0.2rem solid ${Colors.bubbles}`,
-      borderRadius: '125px',
-      overflow: 'hidden',
-    }),
-    name: css({
-      position: 'absolute',
-      left: '50%',
-      top: '50%',
-      transform: 'translate(-50%, -50%)',
-      color: Colors.bubbles
-    }),
-    image: css({
-      borderRadius: '125px',
-      filter: 'brightness(60%)',
-      margin: '-1px',
-      ':hover': css({ filter: 'brightness(100%)' })
     })
   }
 
@@ -146,12 +157,7 @@ export default () => {
       <div css={styles.container}>
         {products.map((p: Product) => {
           return (
-            <div css={styles.productContainer}>
-              <div css={styles.productInner}>
-                <Img css={styles.image} fixed={p.image} />
-                <h3 css={styles.name}>{p.name}</h3>
-              </div>
-            </div>
+            <ProductCard key={p.name} {...p} />
           )
         })}
       </div>

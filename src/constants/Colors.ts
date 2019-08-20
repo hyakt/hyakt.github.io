@@ -4,7 +4,8 @@ interface ColorsType {
   pilsner: string,
   paleale: string,
   amber: string,
-  stout: string
+  stout: string,
+  brewdog: string
 }
 
 const Colors: ColorsType = {
@@ -14,6 +15,7 @@ const Colors: ColorsType = {
   paleale: '#F2B705',
   amber: '#BF0413',
   stout: '#1F1705',
+  brewdog: '#43afdd'
 }
 
 export default Colors
