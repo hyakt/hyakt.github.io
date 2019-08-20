@@ -2,8 +2,8 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import SectionHeader from './SectionHeader'
-import ProductCard from './ProductCard'
+import Section from '../components/Section'
+import ProductCard from '../components/ProductCard'
 import Colors from '../constants/Colors'
 import { rhythm } from '../utils/typography'
 import { Product } from '../utils/types'
@@ -152,8 +152,7 @@ export default () => {
   }
 
   return (
-    <>
-      <SectionHeader title='Product' />
+    <Section title='Product'>
       <div css={styles.container}>
         {products.map((p: Product) => {
           return (
@@ -161,6 +160,6 @@ export default () => {
           )
         })}
       </div>
-    </>
+    </Section>
   )
 }
