@@ -89,7 +89,6 @@ export default (props: Product): any => {
   return (
     <Flippy
       flipOnHover={true}
-      flipOnClick={true}
       flipDirection="vertical"
       style={styles.cardContainer}>
       <FrontSide style={styles.resetCard}>

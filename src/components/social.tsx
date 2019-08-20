@@ -49,16 +49,16 @@ export default () => {
 
   return (
     <div css={styles.container}>
-      <a href={data.site.siteMetadata.socials.github} css={styles.iconLink}>
+      <a target="_blank" href={data.site.siteMetadata.socials.github} css={styles.iconLink}>
         <FontAwesomeIcon icon={faGithub} css={styles.icon} />
       </a>
-      <a href={data.site.siteMetadata.socials.twitter} css={styles.iconLink}>
+      <a target="_blank" href={data.site.siteMetadata.socials.twitter} css={styles.iconLink}>
         <FontAwesomeIcon icon={faTwitter} css={styles.icon} />
       </a>
-      <a href={data.site.siteMetadata.socials.linkedin} css={styles.iconLink}>
+      <a target="_blank" href={data.site.siteMetadata.socials.linkedin} css={styles.iconLink}>
         <FontAwesomeIcon icon={faLinkedin} css={styles.icon} />
       </a>
-      <a href={data.site.siteMetadata.socials.facebook} css={styles.iconLink}>
+      <a target="_blank" href={data.site.siteMetadata.socials.facebook} css={styles.iconLink}>
         <FontAwesomeIcon icon={faFacebook} css={styles.icon} />
       </a>
     </div>
