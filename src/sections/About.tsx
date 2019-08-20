@@ -7,7 +7,8 @@ export default () => {
   const styles = {
     container: css({
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      padding: '0 1rem'
     })
   }
 
@@ -15,9 +16,8 @@ export default () => {
     <Section title='About me'>
       <div css={styles.container}>
         <div>
-          東京でソフトウェアエンジニアをやってます。 <br />
-          大学・大学院ではHuman-Computer Interactionの研究をしてました。 <br />
-          現在は主にデータエンジニアの仕事をしてます。<br />
+          東京でソフトウェアエンジニアをやってます <br />
+          大学・大学院ではHuman-Computer Interactionの研究をしてました<br />
         </div>
       </div>
     </Section>
