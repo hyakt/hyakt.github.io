@@ -14,6 +14,11 @@ module.exports = {
     }
   },
   plugins: [
+    { resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-130604911-1'
+      }
+    },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -40,7 +45,7 @@ module.exports = {
         background_color: `#F2F2F2`,
         theme_color: `#F2F2F2`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+        icon: `src/images/favicon.ico`
       }
     },
     `gatsby-plugin-emotion`,
@@ -57,8 +62,5 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`
       }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ]
 }

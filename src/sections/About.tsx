@@ -16,7 +16,7 @@ export default () => {
       <div css={styles.container}>
         <div>
           東京でソフトウェアエンジニアをやってます。 <br />
-          大学・大学院ではHuman Computer Interactionの研究をしてました。 <br />
+          大学・大学院ではHuman-Computer Interactionの研究をしてました。 <br />
           現在は主にデータエンジニアの仕事をしてます。<br />
         </div>
       </div>
