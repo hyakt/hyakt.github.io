@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Header />
     <About />
     <Product />
-    <SEO title='Home' />
+    <SEO title='Index' />
     <Footer />
   </Layout>
 )
