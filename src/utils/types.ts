@@ -12,5 +12,8 @@ export type Product = {
 export type Skill = {
   name: string,
   description: string,
-  relations: Array<string>
+  relations: Array<string>,
+  image: any,
+  color: string,
+  backgroundColor: string
 }
