@@ -145,8 +145,7 @@ export default () => {
       gridGap: rhythm(1),
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 250px))',
       justifyContent: 'center',
-      margin: rhythm(1),
-      maxWidth: 1200
+      margin: rhythm(1)
     })
   }
 
