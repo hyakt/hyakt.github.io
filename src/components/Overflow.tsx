@@ -29,10 +29,10 @@ export default () => {
   }
 
   const transitionStyles: any = {
-    entering:  { transform: 'translateY(-1000px)' },
+    entering:  { transform: 'translateY(-2000px)' },
     entered:  { transform: 'translateY(0px)' },
     exiting:  { transform: 'translateY(0px)' },
-    exited:  { opacity: 0, transform: 'translateY(-1000px)' },
+    exited:  { opacity: 0, transform: 'translateY(-2000px)' },
   }
 
   return (
