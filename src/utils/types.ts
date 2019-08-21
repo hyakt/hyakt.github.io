@@ -8,3 +8,9 @@ export type Product = {
   github?: string,
   url?: string
 }
+
+export type Skill = {
+  name: string,
+  description: string,
+  relations: Array<string>
+}

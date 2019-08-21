@@ -143,14 +143,15 @@ export default () => {
     container: css({
       display: 'grid',
       gridGap: rhythm(1),
-      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 250px))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 300px))',
       justifyContent: 'center',
+      justifyItems: 'center',
       margin: rhythm(1)
     })
   }
 
   return (
-    <Section title='Product'>
+    <Section title='Products'>
       <div css={styles.container}>
         {products.map((p: Product) => {
           return (

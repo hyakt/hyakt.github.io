@@ -17,7 +17,8 @@ const typography = new Typography({
       name: 'Noto Sans JP',
       styles: ['300', '400', '500', '700', '900']
     }
-  ]
+  ],
+  includeNormalize: false
 })
 
 const { rhythm, scale } = typography
