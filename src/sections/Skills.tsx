@@ -27,7 +27,11 @@ export default () => {
   const skills: Array<Skill> = [
     {
       name: 'JavaScript/TypeScript',
-      description: 'JavaScript/TypeScript',
+      description: `JavaScriptは6年経験があり、TypeScriptを書き始めたのは最近ですが、最近のものはほぼTypeScriptで書いてます。
+                    フロントエンドではReactでのポートフォリオ構築や、Vue.jsでのChromeプラグインの開発
+                    バックエンドではkoaを利用した某会社の在庫管理APIやexpressを利用したLineBotの開発経験があります
+                    また、新規サービスのアプリをReactNativeで作成したことがあるので、
+                    フロント、アプリからバックエンドまで何でも対応できます`,
       relations: ['node.js', 'koa.js', 'shipit', 'webpack', 'eslint', ],
       color: `${Colors.fg}`,
       backgroundColor: '#F7E032',
@@ -35,6 +39,11 @@ export default () => {
     },
     {
       name: 'Emacs',
+      description: `JavaScriptとTypeScriptが得意です
+                    フロントエンドではReactでのポートフォリオ構築や、Vue.jsでのChromeプラグインの開発
+                    バックエンドではkoaを利用した某会社の在庫管理APIやexpressを利用したLineBotの開発経験があります
+         　　　　　　　また、新規サービスのアプリをReactNativeで作成したことがあるので、
+         　　　　　　　フロント、アプリからバックエンドまで何でも対応できます`,
       description: 'JavaScript/TypeScript',
       relations: ['node.js', 'koa.js', 'shipit', 'webpack', 'eslint', ],
       color: `${Colors.bubbles}`,
