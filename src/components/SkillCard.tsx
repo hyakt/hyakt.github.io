@@ -22,20 +22,28 @@ export default (props: Skill): any => {
       strokeWidth: 6,
     },
     content: {
+      display: 'flex',
+      width: '300px',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
       position: 'absolute',
       top: '50%',
       left: '50%',
       transform: 'translateY(-50%) translateX(-50%)'
     },
-    image: {
-      width: '120px',
-      height: '120px'
-    },
     title: {
+      marginTop: rhythm(0.8),
       textAlign: 'center',
       color: props.color
     },
+    image: {
+    },
     description: {
+      marginTop: rhythm(0.8),
+      color: props.color,
+      width: '160px',
+      fontSize: '0.8rem'
     }
   }
 
@@ -52,7 +60,9 @@ export default (props: Skill): any => {
         <path d={badgePath} css={styles.path}></path>
       </svg>
       <div css={styles.content}>
-        <img src={props.image} css={styles.image} />
+        <div css={styles.image}>
+          {props.image}
+        </div>
         <h3 css={styles.title}>{props.name}</h3>
       </div>
     </div>
