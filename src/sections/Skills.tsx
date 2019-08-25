@@ -56,7 +56,7 @@ export default () => {
       relations: ['node.js', 'koa.js', 'shipit', 'webpack', 'eslint', ],
       color: `${Colors.fg}`,
       backgroundColor: '#F7E032',
-      image: <CarouselSVG images={[data.javascript.publicURL, data.typescript.publicURL, data.react.publicURL, data.vuejs.publicURL, data.nodejs.publicURL, data.webpack.publicURL, data.gatsby.publicURL, data.yarn.publicURL, data.npm.publicURL]} width={80} height={50} />
+      image: <CarouselSVG images={[data.javascript.publicURL, data.typescript.publicURL, data.react.publicURL, data.vuejs.publicURL, data.nodejs.publicURL, data.webpack.publicURL, data.gatsby.publicURL, data.yarn.publicURL, data.npm.publicURL]} width={60} height={50} />
     }
   ]
 

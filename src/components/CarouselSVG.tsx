@@ -10,17 +10,17 @@ interface Props {
 export default (props: Props) => {
   const { images } = props
   const n = images.length
-  const speed = n * 2
+  const speed = n * 4
   const deg = 360 / n
-  const radius = Math.round((props.width / 2) / Math.tan( Math.PI / n)) + (n)
+  const radius = Math.round((props.width / 2) / Math.tan( Math.PI / n)) + (n*2)
 
   const carousel = keyframes`
   {
     from {
-      transform: perspective(1000px) rotateY(0deg);
+      transform: perspective(400px) rotateY(0deg);
     }
     to {
-      transform: perspective(1000px) rotateY(-360deg);
+      transform: perspective(400px) rotateY(-360deg);
     }
   }`
 

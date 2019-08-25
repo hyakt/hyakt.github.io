@@ -15,7 +15,8 @@ export default (props: Skill): any => {
     },
     card: {
       overflow: 'visible',
-      fill: props.backgroundColor
+      fill: props.backgroundColor,
+      filter: 'drop-shadow(10px 10px 10px rgba(0,0,0,0.2))'
     },
     path: {
       stroke: Colors.bubbles,
@@ -33,7 +34,7 @@ export default (props: Skill): any => {
       transform: 'translateY(-50%) translateX(-50%)'
     },
     title: {
-      marginTop: rhythm(0.8),
+      marginTop: rhythm(1),
       textAlign: 'center',
       color: props.color
     },
