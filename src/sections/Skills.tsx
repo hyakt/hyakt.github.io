@@ -58,6 +58,9 @@ export default () => {
       docker: file(relativePath: {eq: "skill/infrastructure/docker.svg"}) {
         publicURL
       },
+      nginx: file(relativePath: {eq: "skill/infrastructure/nginx.svg"}) {
+        publicURL
+      },
       firebase: file(relativePath: {eq: "skill/infrastructure/firebase.svg"}) {
         publicURL
       },
@@ -113,6 +116,7 @@ export default () => {
         data.firebase.publicURL,
         data.postgres.publicURL,
         data.redis.publicURL,
+        data.nginx.publicURL,
         data.docker.publicURL
       ]} width={60} height={50} reverse />
     }

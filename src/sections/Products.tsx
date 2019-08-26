@@ -83,7 +83,7 @@ export default () => {
       image: data.portfolio.childImageSharp.fixed,
       date: new Date(2019, 8, 1),
       description: 'Gatsbyで作成したBeerをテーマにしたポートフォリオ',
-      tags: ['Gatsby', 'React', 'emotion', 'TypeScript'],
+      tags: ['Gatsby', 'React', 'emotion', 'TypeScript', 'GraphQL'],
       url: './'
     },
     {
