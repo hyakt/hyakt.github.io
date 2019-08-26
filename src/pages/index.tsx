@@ -14,7 +14,7 @@ const IndexPage = () => (
     <About />
     <Skills />
     <Products />
-    <SEO title='Index' />
+    <SEO title='Portfolio' />
     <Footer />
   </Layout>
 )

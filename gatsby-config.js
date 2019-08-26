@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'hyakt.dev',
-    description: 'Software engineer ♥ Emacs, Web, HCI and 🍺',
+    title: 'Hayato KAJIYAMA',
+    description: 'Software Engineer ♥ Emacs, Web, HCI and 🍺',
     author: 'Hayato KAJIYAMA',
     url: 'https://hyakt.dev',
     icon: 'https://www.gravatar.com/avatar/d9618150777ac86730044bb6de049016?s=130',
