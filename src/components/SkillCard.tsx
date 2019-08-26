@@ -10,13 +10,13 @@ export default (props: Skill): any => {
   const styles = {
     container: {
       position: 'relative',
-      width: '300px',
-      height: '350px',
+      width: '270px',
+      height: '315px',
     },
     card: {
       overflow: 'visible',
       fill: props.backgroundColor,
-      filter: 'drop-shadow(10px 10px 10px rgba(0,0,0,0.2))'
+      filter: 'drop-shadow(0px 0px 1px #ccc)'
     },
     path: {
       stroke: Colors.bubbles,
