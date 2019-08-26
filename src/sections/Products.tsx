@@ -11,6 +11,13 @@ import { Product } from '../utils/types'
 export default () => {
   const data = useStaticQuery(graphql`
     query {
+      portfolio: file(relativePath: { eq: "product/portfolio.png" }) {
+        childImageSharp {
+          fixed(width: 250, height: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      },
       regist: file(relativePath: { eq: "product/regist.png" }) {
         childImageSharp {
           fixed(width: 250, height: 250) {
@@ -71,6 +78,14 @@ export default () => {
   `)
 
   const products: Array<Product> = [
+    {
+      name: 'portfolio',
+      image: data.portfolio.childImageSharp.fixed,
+      date: new Date(2019, 8, 1),
+      description: 'Gatsbyで作成したBeerをテーマにしたポートフォリオ',
+      tags: ['Gatsby', 'React', 'emotion', 'TypeScript'],
+      url: './'
+    },
     {
       name: 'regist',
       image: data.regist.childImageSharp.fixed,

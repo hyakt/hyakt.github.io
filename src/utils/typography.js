@@ -20,7 +20,7 @@ const typography = new Typography({
     {
       name: 'Londrina Outline',
       styles: ['400']
-    },
+    }
   ],
   includeNormalize: false
 })
