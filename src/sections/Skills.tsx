@@ -86,7 +86,17 @@ export default () => {
       relations: [],
       color: `${Colors.fg}`,
       backgroundColor: '#F7E032',
-      image: <CarouselSVG images={[data.typescript.publicURL, data.react.publicURL, data.vuejs.publicURL, data.nodejs.publicURL, data.webpack.publicURL, data.gatsby.publicURL, data.expo.publicURL, data.yarn.publicURL, data.npm.publicURL]} width={60} height={50} />
+      image: <CarouselSVG images={[
+        data.npm.publicURL,
+        data.yarn.publicURL,
+        data.expo.publicURL,
+        data.gatsby.publicURL,
+        data.webpack.publicURL,
+        data.nodejs.publicURL,
+        data.vuejs.publicURL,
+        data.react.publicURL,
+        data.typescript.publicURL
+      ]} width={60} height={50} />
     },
     {
       name: 'Infrastructure',
@@ -94,7 +104,17 @@ export default () => {
       relations: [],
       color: `#fff`,
       backgroundColor: '#ccc',
-      image: <CarouselSVG reverse images={[data.centos.publicURL, data.debian.publicURL, data.ansible.publicURL, data.aws.publicURL, data.gcp.publicURL, data.firebase.publicURL, data.postgres.publicURL, data.redis.publicURL, data.docker.publicURL]} width={60} height={50} />
+      image: <CarouselSVG images={[
+        data.centos.publicURL,
+        data.debian.publicURL,
+        data.ansible.publicURL,
+        data.aws.publicURL,
+        data.gcp.publicURL,
+        data.firebase.publicURL,
+        data.postgres.publicURL,
+        data.redis.publicURL,
+        data.docker.publicURL
+      ]} width={60} height={50} reverse />
     }
   ]
 

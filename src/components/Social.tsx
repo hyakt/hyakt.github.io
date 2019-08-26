@@ -39,7 +39,7 @@ export default () => {
       height: '1.5rem',
       background: Colors.bubbles,
       borderRadius: '1rem',
-      boxShadow: '2px 2px 4px gray'
+      boxShadow: '1px 1px 2px #ccc'
     }),
     icon: css({
       fontSize: '1.5rem',
