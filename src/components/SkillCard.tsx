@@ -35,6 +35,7 @@ export default (props: Skill): any => {
     },
     title: {
       marginTop: rhythm(1),
+      fontFamily: 'Londrina Outline',
       textAlign: 'center',
       color: props.color
     },

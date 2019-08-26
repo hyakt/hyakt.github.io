@@ -16,7 +16,11 @@ const typography = new Typography({
     {
       name: 'Noto Sans JP',
       styles: ['300', '400', '500', '700', '900']
-    }
+    },
+    {
+      name: 'Londrina Outline',
+      styles: ['400']
+    },
   ],
   includeNormalize: false
 })
