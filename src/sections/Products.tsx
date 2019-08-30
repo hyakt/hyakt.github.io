@@ -84,7 +84,8 @@ export default () => {
       date: new Date(2019, 8, 1),
       description: 'Gatsbyで作成したBeerをテーマにしたポートフォリオ',
       tags: ['Gatsby', 'React', 'emotion', 'TypeScript', 'GraphQL'],
-      url: 'https://www.gatsbyjs.org/showcase/hyakt.dev'
+      url: 'https://www.gatsbyjs.org/showcase/hyakt.dev',
+      github: 'https://github.com/hyakt/hyakt.github.io'
     },
     {
       name: 'regist',
