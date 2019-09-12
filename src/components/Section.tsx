@@ -12,7 +12,7 @@ interface Props {
 export default (props: Props) => {
   const styles = {
     container: css({
-      marginTop: `${rhythm(5)}`
+      padding: `${rhythm(3)} 0`
     })
   }
 
