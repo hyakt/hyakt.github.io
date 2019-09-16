@@ -27,7 +27,7 @@ export default () => {
     }),
     container: css({
       display: 'flex',
-      height: rhythm(14),
+      height: rhythm(20),
       backgroundColor: Colors.bubbles,
       justifyContent: 'center',
       alignItems: 'center',
@@ -38,7 +38,9 @@ export default () => {
     icon: css({
       display:'block',
       margin: 'auto',
-      borderRadius: '130px'
+      border: '6px solid #fff',
+      borderRadius: '123px',
+      boxShadow: '1px 0 1px #fff'
     }),
     title: css({
       marginTop: rhythm(0.5),

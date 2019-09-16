@@ -4,7 +4,7 @@ module.exports = {
     description: 'Software Engineer ♥ Emacs, Web, HCI and 🍺',
     author: 'Hayato KAJIYAMA',
     url: 'https://hyakt.dev',
-    icon: 'https://www.gravatar.com/avatar/d9618150777ac86730044bb6de049016?s=130',
+    icon: 'https://www.gravatar.com/avatar/d9618150777ac86730044bb6de049016?s=240',
     socials: {
       github: 'https://github.com/hyakt/',
       twitter: 'https://twitter.com/hyakt0/',
