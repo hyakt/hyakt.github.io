@@ -11,6 +11,13 @@ import { Product } from '../utils/types'
 export default () => {
   const data = useStaticQuery(graphql`
     query {
+      laserwave: file(relativePath: { eq: "product/laserwave.png" }) {
+        childImageSharp {
+          fixed(width: 250, height: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      },
       portfolio: file(relativePath: { eq: "product/portfolio.png" }) {
         childImageSharp {
           fixed(width: 250, height: 250) {
@@ -78,6 +85,14 @@ export default () => {
   `)
 
   const products: Array<Product> = [
+    {
+      name: 'laserwave-theme(emacs-doom-themes)',
+      image: data.laserwave.childImageSharp.fixed,
+      date: new Date(2019, 10, 27),
+      description: 'An clean 80s synthwave / outrun emacs theme inspired by VS Code laserwave.',
+      tags: ['Emacs lisp'],
+      github: 'https://github.com/hlissner/emacs-doom-themes/blob/master/themes/doom-laserwave-theme.el'
+    },
     {
       name: 'portfolio',
       image: data.portfolio.childImageSharp.fixed,
