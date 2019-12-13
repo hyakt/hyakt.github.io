@@ -141,7 +141,7 @@ export default () => {
       image: data.linebot.childImageSharp.fixed,
       date: new Date(2017, 8, 1),
       description: '本の最新巻がいつ発売されたか教えてくれるLine用Bot',
-      tags: ['Node.js','Express','Google Books API','Now'],
+      tags: ['Node.js', 'Express', 'Google Books API', 'Now'],
       github: 'https://github.com/hyakt/when-was-thisbook-published'
     },
     {

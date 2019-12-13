@@ -79,7 +79,6 @@ export default () => {
     }
   `)
 
-
   const skills: Array<Skill> = [
     {
       name: 'JavaScript',

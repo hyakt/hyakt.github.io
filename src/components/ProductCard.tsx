@@ -4,7 +4,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import Img from 'gatsby-image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithubSquare  } from '@fortawesome/free-brands-svg-icons'
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { Product } from '../utils/type'
@@ -12,7 +12,6 @@ import { rhythm } from '../utils/typography'
 import Colors from '../constants/Colors'
 
 export default (props: Product): any => {
-
   const styles = {
     cardContainer: {
       width: '250px',
@@ -37,7 +36,7 @@ export default (props: Product): any => {
       border: `0.2rem solid ${Colors.bubbles}`,
       borderRadius: '125px',
       overflow: 'hidden',
-      background: Colors.brewdog,
+      background: Colors.brewdog
     }),
     name: css({
       position: 'absolute',
@@ -60,7 +59,7 @@ export default (props: Product): any => {
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      margin: '0.8rem 0',
+      margin: '0.8rem 0'
     }),
     linkItem: css({
       margin: '0 0.2rem'
@@ -106,22 +105,22 @@ export default (props: Product): any => {
             {props.tags.map((e: string) => <p key={e} css={styles.tag}>{e}</p>)}
           </div>
           <div css={styles.linkContainer}>
-            { props.github ?
-              <div css={styles.linkItem}>
+            { props.github
+              ? <div css={styles.linkItem}>
                 <a target="_blank" href={props.github}>
                   <FontAwesomeIcon icon={faGithubSquare} css={styles.icon} />
                 </a>
               </div>
               : <div />
             }
-            { props.badge ?
-              <div css={styles.linkItem}>
+            { props.badge
+              ? <div css={styles.linkItem}>
                 {props.badge}
               </div>
               : <div />
             }
-            { props.url ?
-              <div css={styles.linkItem}>
+            { props.url
+              ? <div css={styles.linkItem}>
                 <a target="_blank" href={props.url}>
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} css={styles.icon} />
                 </a>

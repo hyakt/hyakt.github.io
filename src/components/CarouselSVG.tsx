@@ -1,11 +1,11 @@
 import React from 'react'
-import { css, keyframes } from "@emotion/core"
+import { css, keyframes } from '@emotion/core'
 
 interface Props {
-  images: Array<string>,
-  width: number,
-  height: number,
-  reverse?: boolean
+  images: Array<string>;
+  width: number;
+  height: number;
+  reverse?: boolean;
 }
 
 export default (props: Props) => {
@@ -13,7 +13,7 @@ export default (props: Props) => {
   const n = images.length
   const speed = n * 4
   const deg = 360 / n
-  const radius = Math.round((props.width / 2) / Math.tan( Math.PI / n)) + (n*2)
+  const radius = Math.round((props.width / 2) / Math.tan(Math.PI / n)) + (n * 2)
   const direction = props.reverse ? -360 : 360
 
   const carousel = keyframes`
@@ -46,14 +46,14 @@ export default (props: Props) => {
       justifySelf: 'center',
       alignSelf: 'center',
       height: props.height,
-      width: props.width,
+      width: props.width
     })
   }
 
   return (
     <div css={styles.container}>
       { images.map((imageUrl, i) => (
-        <div key={imageUrl} css={css({...styles.cube, transform: `rotateY(${deg * i}deg) translateZ(${radius}px)`})}>
+        <div key={imageUrl} css={css({ ...styles.cube, transform: `rotateY(${deg * i}deg) translateZ(${radius}px)` })}>
           <img src={imageUrl} css={styles.image}/>
         </div>
       )) }

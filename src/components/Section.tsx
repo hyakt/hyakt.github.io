@@ -1,12 +1,12 @@
 import React from 'react'
-import { css } from "@emotion/core"
+import { css } from '@emotion/core'
 import { rhythm } from '../utils/typography'
 
 import SectionHeader from '../components/SectionHeader'
 
 interface Props {
-  title: string,
-  children: any
+  title: string;
+  children: any;
 }
 
 export default (props: Props) => {

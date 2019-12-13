@@ -11,7 +11,7 @@ export default (props: Skill): any => {
     container: {
       position: 'relative',
       width: '270px',
-      height: '315px',
+      height: '315px'
     },
     card: {
       overflow: 'visible',
@@ -20,7 +20,7 @@ export default (props: Skill): any => {
     },
     path: {
       stroke: Colors.bubbles,
-      strokeWidth: 6,
+      strokeWidth: 6
     },
     content: {
       display: 'flex',
@@ -55,11 +55,11 @@ export default (props: Skill): any => {
   return (
     <div css={styles.container}>
       <svg xmlns="http://www.w3.org/2000/svg"
-           preserveAspectRatio="none"
-           css={styles.card}
-           aria-hidden="true"
-           focusable="false"
-           viewBox="0 0 360 420 ">
+        preserveAspectRatio="none"
+        css={styles.card}
+        aria-hidden="true"
+        focusable="false"
+        viewBox="0 0 360 420 ">
         <path d={badgePath} css={styles.path}></path>
       </svg>
       <div css={styles.content}>

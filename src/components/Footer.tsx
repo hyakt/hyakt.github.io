@@ -1,5 +1,5 @@
 import React from 'react'
-import { css } from "@emotion/core"
+import { css } from '@emotion/core'
 import Social from './social'
 
 import Colors from '../constants/Colors'
@@ -20,7 +20,7 @@ export default () => {
     copyright: css({
       fontWeight: 300,
       color: Colors.fg,
-      fontSize: '0.5rem',
+      fontSize: '0.5rem'
     })
   }
 
@@ -31,9 +31,4 @@ export default () => {
       </div>
     </footer>
   )
-
 }
-
-
-
-

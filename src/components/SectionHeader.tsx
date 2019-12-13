@@ -1,10 +1,10 @@
 import React from 'react'
-import { css } from "@emotion/core"
+import { css } from '@emotion/core'
 
 import { rhythm } from '../utils/typography'
 
 interface Props {
-  title: string
+  title: string;
 }
 
 export default (props: Props) => {

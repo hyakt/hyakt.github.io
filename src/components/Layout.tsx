@@ -1,11 +1,11 @@
-import React from "react"
-import { Global, css } from "@emotion/core"
+import React from 'react'
+import { Global, css } from '@emotion/core'
 
 import Colors from '../constants/Colors'
 import { rhythm } from '../utils/typography'
 
 interface LayoutProps {
-  children: any
+  children: any;
 }
 
 const Layout = (props: LayoutProps) => {
