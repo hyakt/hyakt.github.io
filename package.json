@@ -65,7 +65,6 @@
     "eslint-plugin-standard": "^4.0.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "gh-pages": "^2.1.1",
-    "prettier": "^1.18.2",
     "typescript": "^3.5.3"
   },
   "keywords": [
