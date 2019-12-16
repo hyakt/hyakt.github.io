@@ -15,10 +15,10 @@ export default () => {
   return (
     <Section title='About me'>
       <div css={styles.container}>
-        <div>
-          東京でソフトウェアエンジニアをやってます <br />
-          大学・大学院ではHuman-Computer Interactionの研究をしてました<br />
-        </div>
+        <p>
+          東京でフロントエンドエンジニアをやってます <br />
+          大学院ではHuman Computer Interactionの研究をしてました<br />
+        </p>
       </div>
     </Section>
   )
