@@ -67,7 +67,6 @@ export default () => {
 
   return (
     <header css={styles.header}>
-      <Overflow />
       <div css={styles.container}>
         <div>
           <img css={styles.icon} src={data.site.siteMetadata.icon} />
@@ -83,11 +82,11 @@ export default () => {
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg"
-        css={styles.wave}
-        preserveAspectRatio="none"
-        aria-hidden="true"
-        focusable="false"
-        viewBox="0 0 1200 100">
+           css={styles.wave}
+           preserveAspectRatio="none"
+           aria-hidden="true"
+           focusable="false"
+           viewBox="0 0 1200 100">
         <path d="M1200 0.08L1200 20C1061.99 23.82 926.9 24.07 794.74 20.75C596.49 15.77 537.89 1.04 400 0.08C298.43 -0.64 165.09 4.34 0 15L0 0.08L1200 0.08Z">
           <animate attributeName="d" values="M1200 0L1200 20C1061 23 926 24 794 20C596 15 537 1 400 0C298 -0 165 4 0 15L0 0L1200 0Z;
           M1200 0L1200 20C1061 18 926 15 794 12C596 7 537 18 400 17C298 16 165 15 0 15L0 0L1200 0Z;
