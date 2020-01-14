@@ -12,7 +12,7 @@ interface Props {
 export default (props: Props) => {
   const styles = {
     container: css({
-      padding: `${rhythm(3)} 0`
+      padding: `${rhythm(2)} 0`
     })
   }
 

@@ -174,10 +174,9 @@ export default () => {
     container: css({
       display: 'grid',
       gridGap: rhythm(1),
-      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 300px))',
+      gridTemplateColumns: 'repeat(3, minmax(250px, 300px))',
       justifyContent: 'center',
       justifyItems: 'center',
-      margin: rhythm(1)
     })
   }
 
