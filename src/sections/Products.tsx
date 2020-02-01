@@ -174,20 +174,26 @@ export default () => {
     container: css({
       display: 'grid',
       gridGap: rhythm(1),
-      gridTemplateColumns: 'repeat(3, minmax(250px, 300px))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 300px))',
       justifyContent: 'center',
-      justifyItems: 'center',
+      justifyItems: 'center'
+    }),
+    wrapper: css({
+      margin: '0 auto',
+      maxWidth: '1200px',
     })
   }
 
   return (
     <Section title='Products'>
-      <div css={styles.container}>
-        {products.map((p: Product) => {
-          return (
-            <ProductCard key={p.name} {...p} />
-          )
-        })}
+      <div css={styles.wrapper}>
+        <div css={styles.container}>
+          {products.map((p: Product) => {
+            return (
+              <ProductCard key={p.name} {...p} />
+            )
+          })}
+        </div>
       </div>
     </Section>
   )
