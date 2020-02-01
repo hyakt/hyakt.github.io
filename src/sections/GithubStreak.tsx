@@ -25,7 +25,8 @@ export default () => {
   const styles = {
     container: css({
       display: 'block',
-      margin: rhythm(1)
+      margin: rhythm(1),
+      overflowX: 'scroll'
     })
   }
 
