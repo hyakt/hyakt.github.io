@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "publish": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx src",
     "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx src",
     "start": "yarn run dev",
