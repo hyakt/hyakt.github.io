@@ -180,7 +180,7 @@ export default () => {
     }),
     wrapper: css({
       margin: '0 auto',
-      maxWidth: '1200px',
+      maxWidth: '1200px'
     })
   }
 
