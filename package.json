@@ -6,11 +6,11 @@
   "author": "Hayato KAJIYAMA <hyakt0@gmail.com>",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "dev": "gatsby develop",
+    "publish": "gatsby build && gh-pages -d public -b master",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx src",
     "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx src",
-    "start": "yarn run develop",
+    "start": "yarn run dev",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "gatsby clean"
