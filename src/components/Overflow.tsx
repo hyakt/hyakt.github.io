@@ -17,6 +17,7 @@ const Overflow: React.FC = () => {
     fillOpacity: 0.7,
     filter: `blur(0.08rem) drop-shadow(0 0.3rem 0.5rem ${Colors.bubbles})`,
     pointerEvents: 'none',
+    zIndex: 1
   })
 
   const path = 'M100 0C100 20.01 100 32.51 100 37.51C100 42.81 92.64 44.14 90.79 39.17C88.76 33.69 86.99 28.91 83.74 20.14C82.04 15.54 76.89 13.25 72.34 15.05C70 15.97 72.26 15.08 70.17 15.91C64.1 18.31 57.31 18.06 51.43 15.21C47.24 13.19 36.76 8.11 20 0L100 0Z'

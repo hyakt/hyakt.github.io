@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { css } from '@emotion/core'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
@@ -47,6 +48,7 @@ export default (props: Product): any => {
     }),
     image: css({
       borderRadius: '125px',
+      pointerEvents: 'none',
       filter: 'brightness(65%)'
     }),
     description: css({
@@ -105,7 +107,7 @@ export default (props: Product): any => {
             {props.tags.map((e: string) => <p key={e} css={styles.tag}>{e}</p>)}
           </div>
           <div css={styles.linkContainer}>
-            { props.github
+            {props.github
               ? <div css={styles.linkItem}>
                 <a target="_blank" href={props.github}>
                   <FontAwesomeIcon icon={faGithubSquare} css={styles.icon} />
@@ -113,13 +115,13 @@ export default (props: Product): any => {
               </div>
               : <div />
             }
-            { props.badge
+            {props.badge
               ? <div css={styles.linkItem}>
                 {props.badge}
               </div>
               : <div />
             }
-            { props.url
+            {props.url
               ? <div css={styles.linkItem}>
                 <a target="_blank" href={props.url}>
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} css={styles.icon} />

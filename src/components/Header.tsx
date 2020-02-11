@@ -40,6 +40,7 @@ export default () => {
       borderRadius: '123px',
       boxShadow: '1px 0 1px #fff',
       transition: '1.5s',
+      pointerEvents: 'none',
       ':active': {
         transform: 'rotate(-20deg) translate3d(-600px, 1000px, 0px) scale(0.5)'
       }
