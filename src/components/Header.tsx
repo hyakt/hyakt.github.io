@@ -40,10 +40,16 @@ export default () => {
       borderRadius: '123px',
       boxShadow: '1px 0 1px #fff',
       transition: '1.5s',
-      pointerEvents: 'none',
       ':active': {
         transform: 'rotate(-20deg) translate3d(-600px, 1000px, 0px) scale(0.5)'
-      }
+      },
+      height: '15rem',
+      width: '15rem',
+    }),
+    iconImage: css({
+      borderRadius: 'inherit',
+      objectFit: 'contain',
+      pointerEvents: 'none',
     }),
     title: css({
       marginTop: rhythm(0.5),
@@ -73,7 +79,10 @@ export default () => {
       <Overflow />
       <div css={styles.container}>
         <div>
-          <img css={styles.icon} src={data.site.siteMetadata.icon} />
+          <div css={styles.icon}>
+            <img css={styles.iconImage}
+                 src={data.site.siteMetadata.icon} />
+          </div>
           <h1 css={styles.title}>
             {data.site.siteMetadata.author}
           </h1>
