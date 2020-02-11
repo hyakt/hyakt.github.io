@@ -3,7 +3,7 @@
   "private": true,
   "description": "portfolio site",
   "version": "0.0.1",
-  "author": "Hayato KAJIYAMA <hyakt0@gmail.com>",
+  "author": "Hayato Kajiyama <hyakt0@gmail.com>",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
@@ -29,7 +29,6 @@
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-google-analytics": "^2.1.7",
-    "gatsby-plugin-lodash": "^3.1.2",
     "gatsby-plugin-manifest": "^2.2.5",
     "gatsby-plugin-mdx": "^1.0.32",
     "gatsby-plugin-offline": "^2.2.5",
@@ -40,7 +39,6 @@
     "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-sharp": "^2.2.6",
     "github-calendar": "^1.3.4",
-    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -52,6 +50,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.8.24",
+    "@types/typography": "^0.16.3",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
     "eslint": "^6.7.0",

@@ -51,12 +51,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-root-import`,
     {
-      resolve: `gatsby-plugin-lodash`,
-      options: {
-        disabledFeatures: [`shorthands`, `cloning`]
-      }
-    },
-    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`
