@@ -23,8 +23,6 @@ export default () => {
   )
 
   const styles = {
-    header: css({
-    }),
     container: css({
       display: 'flex',
       height: rhythm(20),
@@ -49,7 +47,7 @@ export default () => {
     }),
     subtitle: css({
       marginTop: rhythm(0.5),
-      fontWeight: '400'
+      fontWeight: 'normal'
     }),
     social: css({
       marginTop: rhythm(0.5)
@@ -66,7 +64,8 @@ export default () => {
   }
 
   return (
-    <header css={styles.header}>
+    <header>
+      <Overflow />
       <div css={styles.container}>
         <div>
           <img css={styles.icon} src={data.site.siteMetadata.icon} />

@@ -1,49 +1,36 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { css } from '@emotion/core'
-import { Transition } from 'react-transition-group'
 
 import Colors from '../constants/Colors'
 
-export default () => {
-  const [isVisible, setIsVisible] = useState(true)
-
+const Overflow: React.FC = () => {
   const overflow = css({
     position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
     objectFit: 'cover',
-    stroke: Colors.bubbles,
+    strokeWidth: '0.1px',
+    strokeOpacity: 0.2,
+    stroke: '#333',
     fill: Colors.bubbles,
-    fillOpacity: 0.65,
-    filter: 'blur(0.08rem) drop-shadow(0 0.3rem 0.5rem #c3c3c3)',
-    transition: 'all 1s ease-out'
+    fillOpacity: 0.7,
+    filter: `blur(0.08rem) drop-shadow(0 0.3rem 0.5rem ${Colors.bubbles})`
   })
 
-  const path = 'M1200 0C1200 327.15 1200 531.62 1200 613.41C1200 639.45 1163.31 645.02 1155.59 620.15C1146.53 590.99 1138.26 564.35 1122.82 514.66C1117.01 495.96 1093.7 489.71 1079.32 502.99C1073.46 508.41 1074.69 507.26 1065.79 515.48C1056.63 523.95 1042.75 524.7 1032.72 517.29C1009.18 499.89 989.94 474.52 975 441.2C964.37 417.48 955.89 389.21 949.58 356.37C945.29 334.03 915.8 328.6 903.82 347.94C891.81 367.35 893.05 365.35 881.94 383.3C868.54 404.94 835.5 398.61 831.05 373.55C820.69 315.34 816.08 289.44 809.17 250.56C790.75 147.01 717.1 61.86 617.27 28.72C576.72 15.26 538.28 9.19 501.94 10.53C450.16 12.42 398.17 25.97 345.97 51.15C278.98 83.46 230.32 144.47 213.71 216.96C200.97 272.57 191.08 315.73 178.85 369.09C172.93 394.94 135.6 393.36 131.88 367.1C124.25 313.27 113.83 239.71 104.79 175.89C102.54 159.97 79.9 159.04 76.34 174.72C61.07 242.05 64.16 228.41 56.77 261.03C49.19 294.45 0 288.94 0 254.68C0 220.72 0 135.83 0 0L1200 0Z'
-
-  const transitionStyles: any = {
-    entering: { transform: 'translateY(-2000px)' },
-    entered: { transform: 'translateY(0px)' },
-    exiting: { transform: 'translateY(0px)' },
-    exited: { opacity: 0, transform: 'translateY(-2000px)' }
-  }
+  const path = 'M100 0C100 20.01 100 32.51 100 37.51C100 42.81 92.64 44.14 90.79 39.17C88.76 33.69 86.99 28.91 83.74 20.14C82.04 15.54 76.89 13.25 72.34 15.05C70 15.97 72.26 15.08 70.17 15.91C64.1 18.31 57.31 18.06 51.43 15.21C47.24 13.19 36.76 8.11 20 0L100 0Z'
 
   return (
     <div>
-      <Transition in={isVisible} timeout={300}>
-        { (state: any) => (
-          <svg xmlns="http://www.w3.org/2000/svg"
-            css={overflow}
-            preserveAspectRatio="none"
-            focusable="false"
-            viewBox="0 0 1200 640"
-            onClick={() => setIsVisible(false)}
-            style={transitionStyles[state]}>
-            <path d={path}></path>
-          </svg>
-        )}
-      </Transition>
+      <svg xmlns="http://www.w3.org/2000/svg"
+        css={overflow}
+        preserveAspectRatio="none"
+        focusable="false"
+        viewBox="0 0 100 50">
+        <path d={path} />
+      </svg>
     </div>
   )
 }
+
+export default Overflow
