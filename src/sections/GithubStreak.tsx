@@ -26,7 +26,7 @@ export default () => {
     container: css({
       display: 'block',
       margin: rhythm(1),
-      overflowX: 'scroll'
+      overflowX: 'auto'
     })
   }
 
