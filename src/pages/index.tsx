@@ -12,8 +12,8 @@ const IndexPage = () => (
   <Layout>
     <Header />
     <Skills />
-    <GithubStreak />
     <Products />
+    <GithubStreak />
     <SEO title='Portfolio' />
     <Footer />
   </Layout>
