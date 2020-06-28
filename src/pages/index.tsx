@@ -12,8 +12,8 @@ const IndexPage: React.FC = () => (
   <Layout>
     <Header />
     <Skills />
-    <Products />
     <GithubStreak />
+    <Products />
     <SEO title='Portfolio' />
     <Footer />
   </Layout>
