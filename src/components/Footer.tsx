@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
   return (
     <footer>
       <div css={styles.container}>
-        <div css={styles.copyright}>Copyright© Hayato KAJIYAMA All Rights Reserved.</div>
+        <div css={styles.copyright}>Copyright© Hayato Kajiyama All Rights Reserved.</div>
       </div>
     </footer>
   )
