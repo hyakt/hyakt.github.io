@@ -1,9 +1,9 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-import Section from '../components/Section'
+import { Section } from '../components/Section'
 
-export default () => {
+export const About: React.FC = () => {
   const styles = {
     container: css({
       display: 'flex',

@@ -2,12 +2,12 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Section from '../components/Section'
+import { Section } from '../components/Section'
 import GithubCalendar from '../components/GithubCalendar'
 
 import { rhythm } from '../utils/typography'
 
-export default () => {
+export const GithubStreak: React.FC = () => {
   const data = useStaticQuery(
     graphql`
       query GithubStreakQuery {

@@ -2,15 +2,15 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Section from '../components/Section'
-import SkillCard from '../components/SkillCard'
-import CarouselSVG from '../components/CarouselSVG'
+import { Section } from '../components/Section'
+import { SkillCard } from '../components/SkillCard'
+import { Carousel3D } from '../components/ui/Carousel3D'
 
 import { rhythm } from '../utils/typography'
 import { Skill } from '../utils/types'
 import Colors from '../constants/Colors'
 
-export default () => {
+export const Skills: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
       javascript: file(relativePath: { eq: "skill/javascript/javascript.svg" }) {
@@ -88,7 +88,7 @@ export default () => {
       relations: [],
       color: `${Colors.fg}`,
       backgroundColor: '#F7E032',
-      image: <CarouselSVG images={[
+      image: <Carousel3D images={[
         data.npm.publicURL,
         data.yarn.publicURL,
         data.expo.publicURL,
@@ -106,7 +106,7 @@ export default () => {
       relations: [],
       color: `#fff`,
       backgroundColor: '#ccc',
-      image: <CarouselSVG images={[
+      image: <Carousel3D images={[
         data.centos.publicURL,
         data.debian.publicURL,
         data.ansible.publicURL,
@@ -137,7 +137,7 @@ export default () => {
       <div css={styles.container}>
         {skills.map((s: Skill) => {
           return (
-            <SkillCard key={s.name} {...s}/>
+            <SkillCard key={s.name} {...s} />
           )
         })}
       </div>

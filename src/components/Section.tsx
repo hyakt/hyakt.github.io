@@ -2,14 +2,13 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { rhythm } from '../utils/typography'
 
-import SectionHeader from '../components/SectionHeader'
+import { SectionHeader } from '../components/SectionHeader'
 
-interface Props {
+type Props = {
   title: string;
-  children: any;
 }
 
-export default (props: Props) => {
+export const Section: React.FC<Props> = props => {
   const styles = {
     container: css({
       padding: `${rhythm(2)} 0`

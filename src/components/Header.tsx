@@ -4,10 +4,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { rhythm } from '../utils/typography'
 import Colors from '../constants/Colors'
-import Overflow from '../components/Overflow'
-import Social from '../components/Social'
+import { Overflow } from '../components/Overflow'
+import { Social } from '../components/Social'
 
-export default () => {
+export const Header: React.FC = () => {
   const data = useStaticQuery(
     graphql`
       query HeaderQuery {

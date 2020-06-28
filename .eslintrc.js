@@ -61,7 +61,9 @@ module.exports = {
   // 個別で定義するルール
   // https://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin
   // https://eslint.org/docs/rules/
-  rules: {},
+  rules: {
+    "react/prop-types": "off"
+  },
 
   // 特定のファイルグループで設定するルール
   // https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files

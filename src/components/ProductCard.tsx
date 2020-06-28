@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { css } from '@emotion/core'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
@@ -8,11 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
-import { Product } from '../utils/type'
+import { Product } from '../utils/types'
 import { rhythm } from '../utils/typography'
 import Colors from '../constants/Colors'
 
-export default (props: Product): any => {
+export const ProductCard: React.FC<Product> = props => {
   const styles = {
     cardContainer: {
       width: '250px',
@@ -104,12 +103,12 @@ export default (props: Product): any => {
             {props.description}
           </h3>
           <div css={styles.tagsContainer}>
-            {props.tags.map((e: string) => <p key={e} css={styles.tag}>{e}</p>)}
+            {props.tags?.map((e: string) => <p key={e} css={styles.tag}>{e}</p>)}
           </div>
           <div css={styles.linkContainer}>
             {props.github
               ? <div css={styles.linkItem}>
-                <a target="_blank" href={props.github}>
+                <a target="_blank" rel='noreferrer' href={props.github}>
                   <FontAwesomeIcon icon={faGithubSquare} css={styles.icon} />
                 </a>
               </div>
@@ -123,7 +122,7 @@ export default (props: Product): any => {
             }
             {props.url
               ? <div css={styles.linkItem}>
-                <a target="_blank" href={props.url}>
+                <a target="_blank" rel='noreferrer' href={props.url}>
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} css={styles.icon} />
                 </a>
               </div>

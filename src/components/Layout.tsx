@@ -2,13 +2,8 @@ import React from 'react'
 import { Global, css } from '@emotion/core'
 
 import Colors from '../constants/Colors'
-import { rhythm } from '../utils/typography'
 
-interface LayoutProps {
-  children: any;
-}
-
-const Layout = (props: LayoutProps) => {
+export const Layout: React.FC = props => {
   const reset = css`
     html, body, div, span, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -136,5 +131,3 @@ const Layout = (props: LayoutProps) => {
     </>
   )
 }
-
-export default Layout

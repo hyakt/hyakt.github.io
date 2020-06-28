@@ -2,13 +2,13 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Section from '../components/Section'
-import ProductCard from '../components/ProductCard'
+import { Section } from '../components/Section'
+import { ProductCard } from '../components/ProductCard'
 
 import { rhythm } from '../utils/typography'
 import { Product } from '../utils/types'
 
-export default () => {
+export const Products: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
       laserwave: file(relativePath: { eq: "product/laserwave.png" }) {

@@ -5,15 +5,15 @@
   "version": "0.0.1",
   "author": "Hayato Kajiyama <hyakt0@gmail.com>",
   "scripts": {
-    "build": "gatsby build",
     "dev": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public -b master",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx src",
-    "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx src",
-    "start": "yarn run dev",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx ./src",
+    "type-check": "yarn tsc --noEmit",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",

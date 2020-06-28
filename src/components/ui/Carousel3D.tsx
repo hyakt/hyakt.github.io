@@ -1,14 +1,14 @@
 import React from 'react'
 import { css, keyframes } from '@emotion/core'
 
-interface Props {
+type Props = {
   images: Array<string>;
   width: number;
   height: number;
   reverse?: boolean;
 }
 
-export default (props: Props) => {
+export const Carousel3D: React.FC<Props> = (props) => {
   const { images } = props
   const n = images.length
   const speed = n * 4
@@ -52,11 +52,11 @@ export default (props: Props) => {
 
   return (
     <div css={styles.container}>
-      { images.map((imageUrl, i) => (
+      {images.map((imageUrl, i) => (
         <div key={imageUrl} css={css({ ...styles.cube, transform: `rotateY(${deg * i}deg) translateZ(${radius}px)` })}>
-          <img src={imageUrl} css={styles.image}/>
+          <img src={imageUrl} css={styles.image} />
         </div>
-      )) }
+      ))}
     </div>
   )
 }

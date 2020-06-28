@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 
 import Colors from '../constants/Colors'
 
-const Overflow: React.FC = () => {
+export const Overflow: React.FC = () => {
   const overflow = css({
     position: 'absolute',
     top: 0,
@@ -34,5 +34,3 @@ const Overflow: React.FC = () => {
     </div>
   )
 }
-
-export default Overflow

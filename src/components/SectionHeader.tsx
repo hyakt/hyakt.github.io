@@ -3,11 +3,11 @@ import { css } from '@emotion/core'
 
 import { rhythm } from '../utils/typography'
 
-interface Props {
+type Props = {
   title: string;
 }
 
-export default (props: Props) => {
+export const SectionHeader: React.FC<Props> = props => {
   const styles = {
     header: css({
       marginTop: rhythm(1),

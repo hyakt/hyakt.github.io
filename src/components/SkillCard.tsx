@@ -1,12 +1,10 @@
 import React from 'react'
-import { css } from '@emotion/core'
-import Img from 'gatsby-image'
 
 import { Skill } from '../utils/types'
 import { rhythm } from '../utils/typography'
 import Colors from '../constants/Colors'
 
-export default (props: Skill): any => {
+export const SkillCard: React.FC<Skill> = props => {
   const styles = {
     container: {
       position: 'relative',

@@ -1,10 +1,9 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import Social from './social'
 
 import Colors from '../constants/Colors'
 
-export default () => {
+export const Footer: React.FC = () => {
   const styles = {
     container: css({
       position: 'fixed',

@@ -6,7 +6,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import Colors from '../constants/Colors'
 
-export default () => {
+export const Social: React.FC = () => {
   const data = useStaticQuery(
     graphql`
       query Query {
@@ -49,16 +49,16 @@ export default () => {
 
   return (
     <div css={styles.container}>
-      <a target="_blank" href={data.site.siteMetadata.socials.github} css={styles.iconLink}>
+      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.github} css={styles.iconLink}>
         <FontAwesomeIcon icon={faGithub} css={styles.icon} />
       </a>
-      <a target="_blank" href={data.site.siteMetadata.socials.twitter} css={styles.iconLink}>
+      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.twitter} css={styles.iconLink}>
         <FontAwesomeIcon icon={faTwitter} css={styles.icon} />
       </a>
-      <a target="_blank" href={data.site.siteMetadata.socials.linkedin} css={styles.iconLink}>
+      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.linkedin} css={styles.iconLink}>
         <FontAwesomeIcon icon={faLinkedin} css={styles.icon} />
       </a>
-      <a target="_blank" href={data.site.siteMetadata.socials.facebook} css={styles.iconLink}>
+      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.facebook} css={styles.iconLink}>
         <FontAwesomeIcon icon={faFacebook} css={styles.icon} />
       </a>
     </div>
