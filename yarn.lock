@@ -12018,10 +12018,10 @@ react-flippy@^0.1.5:
   resolved "https://registry.yarnpkg.com/react-flippy/-/react-flippy-0.1.5.tgz#ba097fbd671ef315e7726dc26ea918e0b19be343"
   integrity sha512-y0q9l33YQmASGY7ojcrlY0BzVsCYgThFjXjNL+4C19ws5vEpdKH+PyG5v9ZbLXq2kGArDO921FT7fhFSAX2SMQ==
 
-react-github-calendar@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-2.0.0.tgz#7ceb905c9a80bc40b4bb35d4ebd19a298557728f"
-  integrity sha512-fqUkRp8KacqhjvEsKnhWFux9SflnAHCcuKtkJWK4AMJZxAZuqL+ZYPAKg7JC8PPfCLp6mv8DrEXuCuzkwFjitQ==
+react-github-calendar@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-2.0.2.tgz#a8cd23a80575f2d50ccf6b237734e4e628e22e19"
+  integrity sha512-SkW4qWRGvNxzsAeukdbrIRWyEHSwkbnr+YdfHaXg/jE6KOHmZL0lxTty1kY0l62f9naeVHsmNxeLCPC748Fmtw==
   dependencies:
     date-fns "^2.14.0"
     tinycolor2 "^1.4.0"
