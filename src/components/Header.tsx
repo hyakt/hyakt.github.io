@@ -18,6 +18,9 @@ export const Header: React.FC = () => {
             icon
           }
         }
+        profile: file(relativePath: { eq: "profile.png" }) {
+          publicURL
+        }
       }
     `
   )
@@ -36,15 +39,9 @@ export const Header: React.FC = () => {
     icon: css({
       display: 'block',
       margin: 'auto',
-      border: '6px solid #fff',
-      borderRadius: '123px',
-      boxShadow: '1px 0 1px #fff',
-      transition: '0.8s',
-      ':hover': {
-        transform: 'rotate(-360deg)'
-      },
-      height: '15rem',
-      width: '15rem'
+      height: '20rem',
+      width: '20rem',
+      userSelect: 'none'
     }),
     iconImage: css({
       borderRadius: 'inherit',
@@ -58,7 +55,9 @@ export const Header: React.FC = () => {
     }),
     subtitle: css({
       marginTop: rhythm(0.5),
-      fontWeight: 'normal'
+      fontWeight: 'normal',
+      fontSize: '1rem',
+      textAlign: 'center'
     }),
     social: css({
       marginTop: rhythm(0.5)
@@ -80,7 +79,9 @@ export const Header: React.FC = () => {
       <div css={styles.container}>
         <div>
           <div css={styles.icon}>
-            <img css={styles.iconImage} src={data.site.siteMetadata.icon} />
+            <a href={data.site.siteMetadata.icon} download>
+              <img css={styles.iconImage} src={data.profile.publicURL} />
+            </a>
           </div>
           <h1 css={styles.title}>{data.site.siteMetadata.author}</h1>
           <h2 css={styles.subtitle}>{data.site.siteMetadata.description}</h2>
