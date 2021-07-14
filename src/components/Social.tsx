@@ -1,7 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faTwitter,
+  faLinkedin,
+  faFacebook
+} from '@fortawesome/free-brands-svg-icons'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import Colors from '../constants/Colors'
@@ -49,16 +54,36 @@ export const Social: React.FC = () => {
 
   return (
     <div css={styles.container}>
-      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.github} css={styles.iconLink}>
+      <a
+        target='_blank'
+        rel='noreferrer'
+        href={data.site.siteMetadata.socials.github}
+        css={styles.iconLink}
+      >
         <FontAwesomeIcon icon={faGithub} css={styles.icon} />
       </a>
-      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.twitter} css={styles.iconLink}>
+      <a
+        target='_blank'
+        rel='noreferrer'
+        href={data.site.siteMetadata.socials.twitter}
+        css={styles.iconLink}
+      >
         <FontAwesomeIcon icon={faTwitter} css={styles.icon} />
       </a>
-      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.linkedin} css={styles.iconLink}>
+      <a
+        target='_blank'
+        rel='noreferrer'
+        href={data.site.siteMetadata.socials.linkedin}
+        css={styles.iconLink}
+      >
         <FontAwesomeIcon icon={faLinkedin} css={styles.icon} />
       </a>
-      <a target="_blank" rel='noreferrer' href={data.site.siteMetadata.socials.facebook} css={styles.iconLink}>
+      <a
+        target='_blank'
+        rel='noreferrer'
+        href={data.site.siteMetadata.socials.facebook}
+        css={styles.iconLink}
+      >
         <FontAwesomeIcon icon={faFacebook} css={styles.icon} />
       </a>
     </div>

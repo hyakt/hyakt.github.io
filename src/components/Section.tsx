@@ -5,10 +5,10 @@ import { rhythm } from '../utils/typography'
 import { SectionHeader } from '../components/SectionHeader'
 
 type Props = {
-  title: string;
+  title: string
 }
 
-export const Section: React.FC<Props> = props => {
+export const Section: React.FC<Props> = (props) => {
   const styles = {
     container: css({
       padding: `${rhythm(2)} 0`

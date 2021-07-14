@@ -11,7 +11,7 @@ import { Product } from '../utils/types'
 import { rhythm } from '../utils/typography'
 import Colors from '../constants/Colors'
 
-export const ProductCard: React.FC<Product> = props => {
+export const ProductCard: React.FC<Product> = (props) => {
   const styles = {
     cardContainer: {
       width: '250px',
@@ -89,8 +89,9 @@ export const ProductCard: React.FC<Product> = props => {
   return (
     <Flippy
       flipOnHover={true}
-      flipDirection="vertical"
-      style={styles.cardContainer}>
+      flipDirection='vertical'
+      style={styles.cardContainer}
+    >
       <FrontSide style={styles.resetCard}>
         <div css={styles.cardFrontSide}>
           <Img css={styles.image} fixed={props.image} />
@@ -99,35 +100,41 @@ export const ProductCard: React.FC<Product> = props => {
       </FrontSide>
       <BackSide style={styles.resetCard}>
         <div css={styles.cardBackSide}>
-          <h3 css={styles.description}>
-            {props.description}
-          </h3>
+          <h3 css={styles.description}>{props.description}</h3>
           <div css={styles.tagsContainer}>
-            {props.tags?.map((e: string) => <p key={e} css={styles.tag}>{e}</p>)}
+            {props.tags?.map((e: string) => (
+              <p key={e} css={styles.tag}>
+                {e}
+              </p>
+            ))}
           </div>
           <div css={styles.linkContainer}>
-            {props.github
-              ? <div css={styles.linkItem}>
-                <a target="_blank" rel='noreferrer' href={props.github}>
+            {props.github ? (
+              <div css={styles.linkItem}>
+                <a target='_blank' rel='noreferrer' href={props.github}>
                   <FontAwesomeIcon icon={faGithubSquare} css={styles.icon} />
                 </a>
               </div>
-              : <div />
-            }
-            {props.badge
-              ? <div css={styles.linkItem}>
-                {props.badge}
-              </div>
-              : <div />
-            }
-            {props.url
-              ? <div css={styles.linkItem}>
-                <a target="_blank" rel='noreferrer' href={props.url}>
-                  <FontAwesomeIcon icon={faExternalLinkSquareAlt} css={styles.icon} />
+            ) : (
+              <div />
+            )}
+            {props.badge ? (
+              <div css={styles.linkItem}>{props.badge}</div>
+            ) : (
+              <div />
+            )}
+            {props.url ? (
+              <div css={styles.linkItem}>
+                <a target='_blank' rel='noreferrer' href={props.url}>
+                  <FontAwesomeIcon
+                    icon={faExternalLinkSquareAlt}
+                    css={styles.icon}
+                  />
                 </a>
               </div>
-              : <div />
-            }
+            ) : (
+              <div />
+            )}
           </div>
         </div>
       </BackSide>

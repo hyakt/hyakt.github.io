@@ -17,7 +17,8 @@ export const About: React.FC = () => {
       <div css={styles.container}>
         <p>
           東京でフロントエンドエンジニアをやってます <br />
-          大学院ではHuman Computer Interactionの研究をしてました<br />
+          大学院ではHuman Computer Interactionの研究をしてました
+          <br />
         </p>
       </div>
     </Section>

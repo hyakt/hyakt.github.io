@@ -36,11 +36,7 @@ module.exports = {
 
   // サードパーティのプラグインによって定義されたルールや環境、または構成を使用する場合に指定
   // https://eslint.org/docs/user-guide/configuring#configuring-plugins
-  plugins: [
-    'react',
-    'standard',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', 'standard', '@typescript-eslint'],
 
   // サードパーティやESLintが推奨するベースのルールを設定
   // https://eslint.org/docs/user-guide/configuring#using-eslint-recommended
@@ -62,7 +58,7 @@ module.exports = {
   // https://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin
   // https://eslint.org/docs/rules/
   rules: {
-    "react/prop-types": "off"
+    'react/prop-types': 'off'
   },
 
   // 特定のファイルグループで設定するルール

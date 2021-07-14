@@ -7,9 +7,6 @@ import ReactTooltip from 'react-tooltip'
 import { Section } from '../components/Section'
 import Colors from '../constants/Colors'
 
-
-
-
 import { rhythm } from '../utils/typography'
 
 export const GithubStreak: React.FC = () => {
@@ -43,12 +40,20 @@ export const GithubStreak: React.FC = () => {
     grade0: Colors.bubbles
   }
 
-  const username = data.site.siteMetadata.socials.github.replace(new RegExp('https://github.com/(.*)/'), '$1') as string
+  const username = data.site.siteMetadata.socials.github.replace(
+    new RegExp('https://github.com/(.*)/'),
+    '$1'
+  ) as string
 
   return (
     <Section title='Github Streak'>
       <div css={styles.container}>
-        <GithubCalendar username={username} theme={theme} blockSize={9} blockMargin={5}>
+        <GithubCalendar
+          username={username}
+          theme={theme}
+          blockSize={9}
+          blockMargin={5}
+        >
           <ReactTooltip delayShow={50} html />
         </GithubCalendar>
       </div>

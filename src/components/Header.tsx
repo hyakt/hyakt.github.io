@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
   const styles = {
     container: css({
       display: 'flex',
-      height: rhythm(20),
+      height: '100vh',
       backgroundColor: Colors.bubbles,
       justifyContent: 'center',
       alignItems: 'center',
@@ -80,15 +80,10 @@ export const Header: React.FC = () => {
       <div css={styles.container}>
         <div>
           <div css={styles.icon}>
-            <img css={styles.iconImage}
-              src={data.site.siteMetadata.icon} />
+            <img css={styles.iconImage} src={data.site.siteMetadata.icon} />
           </div>
-          <h1 css={styles.title}>
-            {data.site.siteMetadata.author}
-          </h1>
-          <h2 css={styles.subtitle}>
-            {data.site.siteMetadata.description}
-          </h2>
+          <h1 css={styles.title}>{data.site.siteMetadata.author}</h1>
+          <h2 css={styles.subtitle}>{data.site.siteMetadata.description}</h2>
           <div css={styles.social}>
             <Social />
           </div>

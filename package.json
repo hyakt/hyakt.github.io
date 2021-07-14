@@ -11,7 +11,6 @@
     "deploy": "gatsby build && gh-pages -d public -b master",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx ./src",
     "type-check": "yarn tsc --noEmit",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
@@ -54,18 +53,8 @@
     "@types/typography": "^0.16.3",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
-    "eslint": "^6.7.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-config-standard-jsx": "^6.0.2",
-    "eslint-config-standard-react": "^7.0.2",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-standard": "^4.0.0",
-    "gatsby-plugin-root-import": "^2.0.5",
     "gh-pages": "^2.1.1",
+    "prettier": "^2.3.2",
     "typescript": "^3.5.3"
   },
   "keywords": [

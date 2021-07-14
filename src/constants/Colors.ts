@@ -1,11 +1,11 @@
 interface ColorsType {
-  fg: string;
-  bubbles: string;
-  pilsner: string;
-  paleale: string;
-  amber: string;
-  stout: string;
-  brewdog: string;
+  fg: string
+  bubbles: string
+  pilsner: string
+  paleale: string
+  amber: string
+  stout: string
+  brewdog: string
 }
 
 const Colors: ColorsType = {
