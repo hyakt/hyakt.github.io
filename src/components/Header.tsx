@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
       textAlign: 'center'
     }),
     social: css({
-      marginTop: rhythm(0.5)
+      marginTop: rhythm(1)
     }),
     wave: css({
       fill: colors.bubbles,

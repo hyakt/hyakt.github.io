@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
 import React from 'react'
 import { css } from '@emotion/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,9 +7,7 @@ import {
   faLinkedin,
   faFacebook
 } from '@fortawesome/free-brands-svg-icons'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-
-import colors from '../constants/Colors'
+import { useStaticQuery, graphql } from 'gatsby'
 
 export const Social: React.FC = () => {
   const data = useStaticQuery(
@@ -42,14 +38,11 @@ export const Social: React.FC = () => {
     iconLink: css({
       margin: '0 0.4rem',
       display: 'block',
-      width: '1.5rem',
-      height: '1.5rem',
-      background: colors.bubbles,
-      borderRadius: '1rem',
-      boxShadow: '1px 1px 2px #ccc'
+      width: '3rem',
+      height: '2rem'
     }),
     icon: css({
-      fontSize: '1.5rem',
+      fontSize: '2rem',
       padding: '0.25rem'
     })
   }
