@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react'
-import { css, keyframes } from '@emotion/react'
+import { jsx, css, keyframes } from '@emotion/react'
 
 type Props = {
   images: Array<string>
@@ -17,31 +18,31 @@ export const Carousel3D: React.FC<Props> = (props) => {
   const direction = props.reverse ? -360 : 360
 
   const carousel = keyframes`
-  {
     from {
       transform: perspective(400px) rotateY(0deg);
     }
     to {
       transform: perspective(400px) rotateY(${direction}deg);
-    }
-  }`
+}`
 
   const styles = {
     container: css({
-      animation: `${carousel} ${speed}s infinite linear`,
+      animation: `${carousel} ${speed}s linear infinite`,
       height: props.height,
       width: props.width,
       transformStyle: 'preserve-3d'
     }),
-    cube: css({
-      display: 'flex',
-      position: 'absolute',
-      backfaceVisibility: 'hidden',
-      top: 0,
-      left: 0,
-      margin: '0 auto',
-      transformOrigin: '50% 50% 0'
-    }),
+    cube: (i: number) =>
+      css({
+        display: 'flex',
+        position: 'absolute',
+        backfaceVisibility: 'hidden',
+        top: 0,
+        left: 0,
+        margin: '0 auto',
+        transformOrigin: '50% 50% 0',
+        transform: `rotateY(${deg * i}deg) translateZ(${radius}px)`
+      }),
     image: css({
       justifySelf: 'center',
       alignSelf: 'center',
@@ -53,13 +54,7 @@ export const Carousel3D: React.FC<Props> = (props) => {
   return (
     <div css={styles.container}>
       {images.map((imageUrl, i) => (
-        <div
-          key={imageUrl}
-          css={css({
-            ...styles.cube,
-            transform: `rotateY(${deg * i}deg) translateZ(${radius}px)`
-          })}
-        >
+        <div key={imageUrl} css={styles.cube(i)}>
           <img src={imageUrl} css={styles.image} />
         </div>
       ))}
