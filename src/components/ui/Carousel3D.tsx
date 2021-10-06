@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
 import React from 'react'
 import { css, keyframes } from '@emotion/react'
 
@@ -35,7 +33,7 @@ export const Carousel3D: React.FC<Props> = (props) => {
       width: props.width,
       transformStyle: 'preserve-3d'
     }),
-    cube: {
+    cube: css({
       display: 'flex',
       position: 'absolute',
       backfaceVisibility: 'hidden',
@@ -43,7 +41,7 @@ export const Carousel3D: React.FC<Props> = (props) => {
       left: 0,
       margin: '0 auto',
       transformOrigin: '50% 50% 0'
-    },
+    }),
     image: css({
       justifySelf: 'center',
       alignSelf: 'center',

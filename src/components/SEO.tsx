@@ -5,11 +5,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 type Props = {
   description?: string
   lang?: string
-  meta?: []
   title: string
 }
 
-export const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+export const SEO: React.FC<Props> = ({ description, lang, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -66,13 +65,12 @@ export const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription
         }
-      ].concat(meta)}
+      ]}
     />
   )
 }
 
 SEO.defaultProps = {
   lang: `ja`,
-  meta: [],
   description: ``
 }

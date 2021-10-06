@@ -2,7 +2,8 @@
   "include": ["./src/**/*"],
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "node",
     "lib": ["dom"],
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
