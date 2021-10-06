@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 
 export const Social: React.FC = () => {
   const data = useStaticQuery(
@@ -44,7 +44,7 @@ export const Social: React.FC = () => {
       display: 'block',
       width: '1.5rem',
       height: '1.5rem',
-      background: Colors.bubbles,
+      background: colors.bubbles,
       borderRadius: '1rem',
       boxShadow: '1px 1px 2px #ccc'
     }),

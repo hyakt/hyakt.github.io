@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import { css } from '@emotion/react'
 
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 
 export const Overflow: React.FC = () => {
   const overflow = css({
@@ -15,9 +15,9 @@ export const Overflow: React.FC = () => {
     strokeWidth: '0.1px',
     strokeOpacity: 0.2,
     stroke: '#333',
-    fill: Colors.bubbles,
+    fill: colors.bubbles,
     fillOpacity: 0.7,
-    filter: `blur(0.08rem) drop-shadow(0 0.3rem 0.5rem ${Colors.bubbles})`,
+    filter: `blur(0.08rem) drop-shadow(0 0.3rem 0.5rem ${colors.bubbles})`,
     pointerEvents: 'none',
     zIndex: 1
   })

@@ -2,7 +2,7 @@
 import { Global, css, jsx } from '@emotion/react'
 import React from 'react'
 
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 
 export const Layout: React.FC = (props) => {
   const reset = css`
@@ -174,26 +174,26 @@ export const Layout: React.FC = (props) => {
   `
   const global = css`
     body {
-      background: ${Colors.bubbles};
-      border-left: 1rem solid ${Colors.bubbles};
-      border-right: 1rem solid ${Colors.bubbles};
-      color: ${Colors.fg};
+      background: ${colors.bubbles};
+      border-left: 1rem solid ${colors.bubbles};
+      border-right: 1rem solid ${colors.bubbles};
+      color: ${colors.fg};
     }
     a:link {
-      color: ${Colors.fg};
+      color: ${colors.fg};
     }
     a:visited {
-      color: ${Colors.fg};
+      color: ${colors.fg};
     }
     a:hover {
-      color: ${Colors.fg};
+      color: ${colors.fg};
     }
     a:active {
-      color: ${Colors.fg};
+      color: ${colors.fg};
     }
   `
   const background = css`
-    background: ${Colors.paleale};
+    background: ${colors.paleale};
     height: 100%;
     width: 100%;
     z-index: -1;

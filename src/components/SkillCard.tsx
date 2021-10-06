@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 
 import { Skill } from '../utils/types'
 import { rhythm } from '../utils/typography'
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 import { css } from '@emotion/react'
 
 const badgePath =
@@ -22,7 +22,7 @@ export const SkillCard: React.FC<Skill> = (props) => {
         filter: 'drop-shadow(0px 0px 1px #ccc)'
       },
       path: {
-        stroke: Colors.bubbles,
+        stroke: colors.bubbles,
         strokeWidth: 6
       },
       content: css({

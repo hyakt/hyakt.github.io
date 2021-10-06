@@ -9,7 +9,7 @@ import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { Product } from '../utils/types'
 import { rhythm } from '../utils/typography'
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 
 export const ProductCard: React.FC<Product> = (props) => {
   const styles = {
@@ -25,7 +25,7 @@ export const ProductCard: React.FC<Product> = (props) => {
       position: 'relative',
       width: '100%',
       height: '100%',
-      border: `0.2rem solid ${Colors.bubbles}`,
+      border: `0.2rem solid ${colors.bubbles}`,
       borderRadius: '125px',
       overflow: 'hidden'
     }),
@@ -33,17 +33,17 @@ export const ProductCard: React.FC<Product> = (props) => {
       position: 'relative',
       width: '100%',
       height: '100%',
-      border: `0.2rem solid ${Colors.bubbles}`,
+      border: `0.2rem solid ${colors.bubbles}`,
       borderRadius: '125px',
       overflow: 'hidden',
-      background: Colors.brewdog
+      background: colors.brewdog
     }),
     name: css({
       position: 'absolute',
       left: '50%',
       top: '50%',
       transform: 'translate(-50%, -50%)',
-      color: Colors.bubbles
+      color: colors.bubbles
     }),
     image: css({
       borderRadius: '125px',
@@ -52,7 +52,7 @@ export const ProductCard: React.FC<Product> = (props) => {
     }),
     description: css({
       padding: `${rhythm(1.8)} ${rhythm(2)} 0 ${rhythm(2)}`,
-      color: Colors.bubbles
+      color: colors.bubbles
     }),
     linkContainer: css({
       display: 'flex',
@@ -76,13 +76,13 @@ export const ProductCard: React.FC<Product> = (props) => {
       margin: '1rem 0.5rem 0 0.5rem'
     }),
     tag: css({
-      border: `1px solid ${Colors.bubbles}`,
+      border: `1px solid ${colors.bubbles}`,
       margin: '0.1rem',
       padding: '0.2rem',
       borderRadius: '1rem',
       fontSize: '0.6rem',
       fontWeight: 400,
-      color: Colors.bubbles
+      color: colors.bubbles
     })
   }
 

@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import { css } from '@emotion/react'
 
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 
 export const Footer: React.FC = () => {
   const styles = {
@@ -16,11 +16,11 @@ export const Footer: React.FC = () => {
       bottom: 0,
       height: '1.2rem',
       width: '100%',
-      background: Colors.bubbles
+      background: colors.bubbles
     }),
     copyright: css({
       fontWeight: 300,
-      color: Colors.fg,
+      color: colors.fg,
       fontSize: '0.5rem'
     })
   }

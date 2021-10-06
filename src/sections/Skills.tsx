@@ -8,7 +8,7 @@ import { Carousel3D } from '../components/ui/Carousel3D'
 
 import { rhythm } from '../utils/typography'
 import { Skill } from '../utils/types'
-import Colors from '../constants/Colors'
+import colors from '../constants/colors'
 
 export const Skills: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,10 @@ export const Skills: React.FC = () => {
       react: file(relativePath: { eq: "skill/javascript/react.svg" }) {
         publicURL
       }
-      vuejs: file(relativePath: { eq: "skill/javascript/vuejs.svg" }) {
+      nextjs: file(relativePath: { eq: "skill/javascript/next.svg" }) {
+        publicURL
+      }
+      babel: file(relativePath: { eq: "skill/javascript/babel.svg" }) {
         publicURL
       }
       nodejs: file(relativePath: { eq: "skill/javascript/nodejs.svg" }) {
@@ -89,24 +92,21 @@ export const Skills: React.FC = () => {
 
   const skills: Array<Skill> = [
     {
-      name: 'JavaScript',
-      description: `ReactでWebSite、VuejsでChromeExtension、\n
-                    NodeでAPIやLineBot、\n
-                    ReactNativeでiOSAppなど開発してます。\n`,
+      name: 'Frontend',
+      description: ``,
       relations: [],
-      color: `${Colors.fg}`,
+      color: `${colors.fg}`,
       backgroundColor: '#F7E032',
       image: (
         <Carousel3D
           images={[
             data.npm.publicURL,
-            data.yarn.publicURL,
             data.expo.publicURL,
+            data.babel.publicURL,
             data.gatsby.publicURL,
             data.webpack.publicURL,
-            data.nodejs.publicURL,
-            data.vuejs.publicURL,
             data.react.publicURL,
+            data.nextjs.publicURL,
             data.typescript.publicURL
           ]}
           width={60}
@@ -115,7 +115,7 @@ export const Skills: React.FC = () => {
       )
     },
     {
-      name: 'Infrastructure',
+      name: 'Backend',
       description: ``,
       relations: [],
       color: `#fff`,
@@ -123,15 +123,12 @@ export const Skills: React.FC = () => {
       image: (
         <Carousel3D
           images={[
-            data.centos.publicURL,
-            data.debian.publicURL,
-            data.ansible.publicURL,
+            data.nodejs.publicURL,
             data.aws.publicURL,
             data.gcp.publicURL,
             data.firebase.publicURL,
             data.postgres.publicURL,
             data.redis.publicURL,
-            data.nginx.publicURL,
             data.docker.publicURL
           ]}
           width={60}

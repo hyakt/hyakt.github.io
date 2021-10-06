@@ -5,7 +5,7 @@ import { css } from '@emotion/react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { rhythm } from '../utils/typography'
-import Colors from '../constants/Colors'
+import colors from '../constants/Colors'
 import { Overflow } from '../components/Overflow'
 import { Social } from '../components/Social'
 
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
     container: css({
       display: 'flex',
       height: '100vh',
-      backgroundColor: Colors.bubbles,
+      backgroundColor: colors.bubbles,
       justifyContent: 'center',
       alignItems: 'center',
       alignContent: 'center',
@@ -65,12 +65,12 @@ export const Header: React.FC = () => {
       marginTop: rhythm(0.5)
     }),
     wave: css({
-      fill: Colors.bubbles,
+      fill: colors.bubbles,
       width: '100%'
     }),
     bubbles: css({
-      fill: Colors.paleale,
-      stroke: Colors.bubbles,
+      fill: colors.paleale,
+      stroke: colors.bubbles,
       strokeWidth: '2px'
     })
   }
