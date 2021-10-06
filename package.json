@@ -6,13 +6,11 @@
   "author": "Hayato Kajiyama <hyakt0@gmail.com>",
   "scripts": {
     "dev": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "yarn build && gh-pages -d public -b master",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "type-check": "yarn tsc --noEmit",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "type-check": "yarn tsc --noEmit"
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",
