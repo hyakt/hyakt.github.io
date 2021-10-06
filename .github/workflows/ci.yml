@@ -27,20 +27,12 @@ jobs:
       with:
         node-version: '14'
         cache: 'yarn'
-    - run: yarn install
+    - name: yarn install
+      run: yarn install --check-files --frozen-lockfile --non-interactive
 
-  type-check:
-    needs:
-      - setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn type-check
+    - name: yarn type-check
+      run: yarn type-check
 
-  lint:
-    needs:
-      - setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn lint
+    - name: yarn lint
+      run: yarn lint
+
