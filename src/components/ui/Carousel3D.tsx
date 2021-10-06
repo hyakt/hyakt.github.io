@@ -1,5 +1,7 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react'
 import React from 'react'
-import { css, keyframes } from '@emotion/core'
+import { css, keyframes } from '@emotion/react'
 
 type Props = {
   images: Array<string>

@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react'
 import React from 'react'
 
 import { Skill } from '../utils/types'

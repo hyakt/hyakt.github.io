@@ -36,7 +36,7 @@ module.exports = {
 
   // サードパーティのプラグインによって定義されたルールや環境、または構成を使用する場合に指定
   // https://eslint.org/docs/user-guide/configuring#configuring-plugins
-  plugins: ['react', 'standard', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', '@emotion'],
 
   // サードパーティやESLintが推奨するベースのルールを設定
   // https://eslint.org/docs/user-guide/configuring#using-eslint-recommended
@@ -46,8 +46,6 @@ module.exports = {
     // 'eslint:recommended',
     // reactの推奨ルール
     'plugin:react/recommended',
-    // eslint-config-standardルール
-    'standard',
     // typescript-eslintで対応できるeslintの推奨する一連のルール
     // 'plugin:@typescript-eslint/eslint-recommended',
     // typescrip-eslinttの推奨する一連のルール
@@ -58,20 +56,13 @@ module.exports = {
   // https://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin
   // https://eslint.org/docs/rules/
   rules: {
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    '@emotion/pkg-renaming': 'error'
   },
 
   // 特定のファイルグループで設定するルール
   // https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files
   // overrides: {},
-
-  // 各ルールが実行させる時の補助共有設定
-  // https://eslint.org/docs/user-guide/configuring#adding-shared-settings
-  settings: {
-    react: {
-      version: '16.3'
-    }
-  },
 
   // ESLintを適応しないファイルやディレクトリを指定 (v6.7.0以上)
   // https://eslint.org/docs/user-guide/configuring#ignorepatterns-in-config-files
