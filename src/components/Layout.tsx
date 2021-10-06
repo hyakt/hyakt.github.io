@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
+import { Global, css, jsx } from '@emotion/react'
 import React from 'react'
-import { Global, css } from '@emotion/react'
 
 import Colors from '../constants/Colors'
 
@@ -52,7 +51,7 @@ export const Layout: React.FC = (props) => {
     label,
     legend,
     table,
-    caption,
+    ,
     tbody,
     tfoot,
     thead,
