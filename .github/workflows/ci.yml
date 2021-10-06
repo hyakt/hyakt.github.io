@@ -30,7 +30,11 @@ jobs:
     - run: yarn install
 
   type-check:
-    - run: yarn type-check
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn type-check
 
   lint:
-    - run: yarn lint
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn lint
