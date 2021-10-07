@@ -2,7 +2,7 @@
   "name": "hyakt.dev",
   "private": true,
   "description": "portfolio site",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Hayato Kajiyama <hyakt0@gmail.com>",
   "scripts": {
     "dev": "gatsby develop",
