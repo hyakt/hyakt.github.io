@@ -51,13 +51,13 @@ module.exports = {
       }
     },
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`
       }
     },
-    `gatsby-plugin-mdx`
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-preload-fonts`
   ]
 }
