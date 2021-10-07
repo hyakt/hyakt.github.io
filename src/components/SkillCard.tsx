@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 
 import { Skill } from '../utils/types'
 import { rhythm } from '../utils/typography'
-import colors from '../constants/Colors'
+import colors from '../constants/colors'
 import { css } from '@emotion/react'
 
 const badgePath =

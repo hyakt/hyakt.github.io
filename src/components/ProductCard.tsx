@@ -9,7 +9,7 @@ import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { Product } from '../utils/types'
 import { rhythm } from '../utils/typography'
-import colors from '../constants/Colors'
+import colors from '../constants/colors'
 
 export const ProductCard: React.FC<Product> = (props) => {
   const styles = {

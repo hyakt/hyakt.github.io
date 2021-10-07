@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react'
 import React from 'react'
 import { css } from '@emotion/react'
 
-import colors from '../constants/Colors'
+import colors from '../constants/colors'
 
 export const Overflow: React.FC = () => {
   const overflow = css({

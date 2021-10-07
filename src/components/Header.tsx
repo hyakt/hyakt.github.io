@@ -5,7 +5,7 @@ import { css } from '@emotion/react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { rhythm } from '../utils/typography'
-import colors from '../constants/Colors'
+import colors from '../constants/colors'
 import { Overflow } from '../components/Overflow'
 import { Social } from '../components/Social'
 

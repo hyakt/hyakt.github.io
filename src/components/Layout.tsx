@@ -2,7 +2,7 @@
 import { Global, css, jsx } from '@emotion/react'
 import React from 'react'
 
-import colors from '../constants/Colors'
+import colors from '../constants/colors'
 
 export const Layout: React.FC = (props) => {
   const reset = css`
