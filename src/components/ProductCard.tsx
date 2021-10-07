@@ -1,17 +1,27 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
-import Img from 'gatsby-image'
+import Img, { FixedObject } from 'gatsby-image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
-import { Product } from '../types'
 import { rhythm } from '../utils/typography'
 import colors from '../constants/colors'
 
-export const ProductCard: React.FC<Product> = (props) => {
+export type Props = {
+  name: string
+  image: FixedObject
+  date?: Date
+  description?: string
+  tags?: string[]
+  badge?: JSX.Element
+  github?: string
+  url?: string
+}
+
+export const ProductCard: React.FC<Props> = (props) => {
   const styles = {
     cardContainer: {
       width: '250px',
@@ -102,28 +112,23 @@ export const ProductCard: React.FC<Product> = (props) => {
         <div css={styles.cardBackSide}>
           <h3 css={styles.description}>{props.description}</h3>
           <div css={styles.tagsContainer}>
-            {props.tags?.map((e: string) => (
-              <p key={e} css={styles.tag}>
-                {e}
-              </p>
-            ))}
+            {props.tags &&
+              props.tags.map((e) => (
+                <p key={e} css={styles.tag}>
+                  {e}
+                </p>
+              ))}
           </div>
           <div css={styles.linkContainer}>
-            {props.github ? (
+            {props.github && (
               <div css={styles.linkItem}>
                 <a target='_blank' rel='noreferrer' href={props.github}>
                   <FontAwesomeIcon icon={faGithubSquare} css={styles.icon} />
                 </a>
               </div>
-            ) : (
-              <div />
             )}
-            {props.badge ? (
-              <div css={styles.linkItem}>{props.badge}</div>
-            ) : (
-              <div />
-            )}
-            {props.url ? (
+            {props.badge && <div css={styles.linkItem}>{props.badge}</div>}
+            {props.url && (
               <div css={styles.linkItem}>
                 <a target='_blank' rel='noreferrer' href={props.url}>
                   <FontAwesomeIcon
@@ -132,8 +137,6 @@ export const ProductCard: React.FC<Product> = (props) => {
                   />
                 </a>
               </div>
-            ) : (
-              <div />
             )}
           </div>
         </div>

@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { css } from '@emotion/react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { Section } from '../components/Section'
-import { SkillCard } from '../components/SkillCard'
+import { SkillCard, Props as SkillCardProps } from '../components/SkillCard'
 import { Carousel3D } from '../components/ui/Carousel3D'
 
 import { rhythm } from '../utils/typography'
-import { Skill } from '../types'
 import colors from '../constants/colors'
 
 export const Skills: React.FC = () => {
@@ -26,7 +25,7 @@ export const Skills: React.FC = () => {
       react: file(relativePath: { eq: "skill/javascript/react.svg" }) {
         publicURL
       }
-      nextjs: file(relativePath: { eq: "skill/javascript/next.svg" }) {
+      nextjs: file(relativePath: { eq: "skill/javascript/nextjs.svg" }) {
         publicURL
       }
       babel: file(relativePath: { eq: "skill/javascript/babel.svg" }) {
@@ -90,54 +89,57 @@ export const Skills: React.FC = () => {
     }
   `)
 
-  const skills: Array<Skill> = [
-    {
-      name: 'Frontend',
-      description: ``,
-      relations: [],
-      color: `${colors.fg}`,
-      backgroundColor: '#F7E032',
-      image: (
-        <Carousel3D
-          images={[
-            data.npm.publicURL,
-            data.expo.publicURL,
-            data.babel.publicURL,
-            data.gatsby.publicURL,
-            data.webpack.publicURL,
-            data.react.publicURL,
-            data.nextjs.publicURL,
-            data.typescript.publicURL
-          ]}
-          width={60}
-          height={50}
-        />
-      )
-    },
-    {
-      name: 'Backend',
-      description: ``,
-      relations: [],
-      color: `#fff`,
-      backgroundColor: '#ccc',
-      image: (
-        <Carousel3D
-          images={[
-            data.nodejs.publicURL,
-            data.aws.publicURL,
-            data.gcp.publicURL,
-            data.firebase.publicURL,
-            data.postgres.publicURL,
-            data.redis.publicURL,
-            data.docker.publicURL
-          ]}
-          width={60}
-          height={50}
-          reverse
-        />
-      )
-    }
-  ]
+  const skills: SkillCardProps[] = useMemo(
+    () => [
+      {
+        name: 'Frontend',
+        description: ``,
+        relations: [],
+        color: `${colors.fg}`,
+        backgroundColor: '#F7E032',
+        image: (
+          <Carousel3D
+            images={[
+              data.npm.publicURL,
+              data.expo.publicURL,
+              data.babel.publicURL,
+              data.gatsby.publicURL,
+              data.webpack.publicURL,
+              data.react.publicURL,
+              data.nextjs.publicURL,
+              data.typescript.publicURL
+            ]}
+            width={60}
+            height={50}
+          />
+        )
+      },
+      {
+        name: 'Backend',
+        description: ``,
+        relations: [],
+        color: `#fff`,
+        backgroundColor: '#ccc',
+        image: (
+          <Carousel3D
+            images={[
+              data.nodejs.publicURL,
+              data.aws.publicURL,
+              data.gcp.publicURL,
+              data.firebase.publicURL,
+              data.postgres.publicURL,
+              data.redis.publicURL,
+              data.docker.publicURL
+            ]}
+            width={60}
+            height={50}
+            reverse
+          />
+        )
+      }
+    ],
+    []
+  )
 
   const styles = {
     container: css({
@@ -153,7 +155,7 @@ export const Skills: React.FC = () => {
   return (
     <Section title='Skills'>
       <div css={styles.container}>
-        {skills.map((s: Skill) => {
+        {skills.map((s) => {
           return <SkillCard key={s.name} {...s} />
         })}
       </div>
