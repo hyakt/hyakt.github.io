@@ -1,6 +1,6 @@
 const colors = {
   fg: '#2a2a2a',
-  bubbles: '#F2F2F2',
+  bubbles: '#FBFBF8',
   pilsner: '#F2A007',
   paleale: '#F2B705',
   amber: '#BF0413',
