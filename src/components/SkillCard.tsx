@@ -52,7 +52,7 @@ export const SkillCard: React.FC<Props> = (props) => {
         fontSize: '1.4rem'
       })
     }),
-    [props]
+    [props.backgroundColor]
   )
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
-import Img, { FixedObject } from 'gatsby-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
@@ -12,7 +12,8 @@ import colors from '../constants/colors'
 
 export type Props = {
   name: string
-  image: FixedObject
+  image: IGatsbyImageData
+  alt: string
   date?: Date
   description?: string
   tags?: string[]
@@ -21,81 +22,81 @@ export type Props = {
   url?: string
 }
 
-export const ProductCard: React.FC<Props> = (props) => {
-  const styles = {
-    cardContainer: {
-      width: '250px',
-      height: '250px'
-    },
-    resetCard: {
-      padding: 0,
-      boxShadow: 'unset'
-    },
-    cardFrontSide: css({
-      position: 'relative',
-      width: '100%',
-      height: '100%',
-      border: `0.2rem solid ${colors.bubbles}`,
-      borderRadius: '125px',
-      overflow: 'hidden'
-    }),
-    cardBackSide: css({
-      position: 'relative',
-      width: '100%',
-      height: '100%',
-      border: `0.2rem solid ${colors.bubbles}`,
-      borderRadius: '125px',
-      overflow: 'hidden',
-      background: colors.brewdog
-    }),
-    name: css({
-      position: 'absolute',
-      left: '50%',
-      top: '50%',
-      transform: 'translate(-50%, -50%)',
-      color: colors.bubbles
-    }),
-    image: css({
-      borderRadius: '125px',
-      pointerEvents: 'none',
-      filter: 'brightness(65%)'
-    }),
-    description: css({
-      padding: `${rhythm(1.8)} ${rhythm(2)} 0 ${rhythm(2)}`,
-      color: colors.bubbles
-    }),
-    linkContainer: css({
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-      margin: '0.8rem 0'
-    }),
-    linkItem: css({
-      margin: '0 0.2rem'
-    }),
-    icon: css({
-      fontSize: '1.4rem'
-    }),
-    tagsContainer: css({
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      margin: '1rem 0.5rem 0 0.5rem'
-    }),
-    tag: css({
-      border: `1px solid ${colors.bubbles}`,
-      margin: '0.1rem',
-      padding: '0.2rem',
-      borderRadius: '1rem',
-      fontSize: '0.6rem',
-      fontWeight: 400,
-      color: colors.bubbles
-    })
-  }
+const styles = {
+  cardContainer: {
+    width: '250px',
+    height: '250px'
+  },
+  resetCard: {
+    padding: 0,
+    boxShadow: 'unset'
+  },
+  cardFrontSide: css({
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    border: `0.2rem solid ${colors.bubbles}`,
+    borderRadius: '125px',
+    overflow: 'hidden'
+  }),
+  cardBackSide: css({
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    border: `0.2rem solid ${colors.bubbles}`,
+    borderRadius: '125px',
+    overflow: 'hidden',
+    background: colors.brewdog
+  }),
+  name: css({
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    color: colors.bubbles
+  }),
+  image: css({
+    borderRadius: '125px',
+    pointerEvents: 'none',
+    filter: 'brightness(65%)'
+  }),
+  description: css({
+    padding: `${rhythm(1.8)} ${rhythm(2)} 0 ${rhythm(2)}`,
+    color: colors.bubbles
+  }),
+  linkContainer: css({
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0.8rem 0'
+  }),
+  linkItem: css({
+    margin: '0 0.2rem'
+  }),
+  icon: css({
+    fontSize: '1.4rem'
+  }),
+  tagsContainer: css({
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    margin: '1rem 0.5rem 0 0.5rem'
+  }),
+  tag: css({
+    border: `1px solid ${colors.bubbles}`,
+    margin: '0.1rem',
+    padding: '0.2rem',
+    borderRadius: '1rem',
+    fontSize: '0.6rem',
+    fontWeight: 400,
+    color: colors.bubbles
+  })
+}
 
+export const ProductCard: React.FC<Props> = (props) => {
   return (
     <Flippy
       flipOnHover={true}
@@ -104,7 +105,7 @@ export const ProductCard: React.FC<Props> = (props) => {
     >
       <FrontSide style={styles.resetCard}>
         <div css={styles.cardFrontSide}>
-          <Img css={styles.image} fixed={props.image} />
+          <GatsbyImage css={styles.image} image={props.image} alt={props.alt} />
           <h3 css={styles.name}>{props.name}</h3>
         </div>
       </FrontSide>

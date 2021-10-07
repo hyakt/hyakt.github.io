@@ -15,72 +15,52 @@ export const Products: React.FC = () => {
     query {
       laserwave: file(relativePath: { eq: "product/laserwave.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250, height: 250)
         }
       }
       portfolio: file(relativePath: { eq: "product/portfolio.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       regist: file(relativePath: { eq: "product/regist.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250, height: 250)
         }
       }
       picker: file(relativePath: { eq: "product/picker.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       hackernews: file(relativePath: { eq: "product/hackernews.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250, height: 250)
         }
       }
       linebot: file(relativePath: { eq: "product/linebot.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250)
         }
       }
       hugo: file(relativePath: { eq: "product/hugo.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250, height: 250)
         }
       }
       shapio: file(relativePath: { eq: "product/shapio.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250, height: 250)
         }
       }
       hmd: file(relativePath: { eq: "product/hmd.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 250, height: 250)
         }
       }
       twitterbot: file(relativePath: { eq: "product/twitterbot.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 250) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
@@ -90,7 +70,8 @@ export const Products: React.FC = () => {
     () => [
       {
         name: 'laserwave-theme(emacs-doom-themes)',
-        image: data.laserwave.childImageSharp.fixed,
+        image: data.laserwave.childImageSharp.gatsbyImageData,
+        alt: 'laserwave',
         date: new Date(2019, 10, 27),
         description:
           'An clean 80s synthwave / outrun emacs theme inspired by VS Code laserwave.',
@@ -100,18 +81,20 @@ export const Products: React.FC = () => {
       },
       {
         name: 'portfolio',
-        image: data.portfolio.childImageSharp.fixed,
+        image: data.portfolio.childImageSharp.gatsbyImageData,
+        alt: 'portfolio',
         date: new Date(2019, 8, 1),
-        description: 'Gatsbyで作成したBeerをテーマにしたポートフォリオ',
+        description: 'Gatsbyで作成した🍺をテーマにしたポートフォリオ',
         tags: ['Gatsby', 'React', 'emotion', 'TypeScript', 'GraphQL'],
         url: 'https://www.gatsbyjs.org/showcase/hyakt.dev',
         github: 'https://github.com/hyakt/hyakt.github.io'
       },
       {
         name: 'regist',
-        image: data.regist.childImageSharp.fixed,
+        image: data.regist.childImageSharp.gatsbyImageData,
+        alt: 'regist',
         date: new Date(2019, 7, 1),
-        description: 'ReactNativeで作成したiOS用のGistビューア',
+        description: 'ReactNativeで作成したGithub Gistビューア',
         tags: ['ReactNative', 'expo', 'Github API', 'JavaScript', 'Sentry'],
         badge: (
           <a href='https://apps.apple.com/us/app/regist/id1472456939?mt=8'>
@@ -125,7 +108,8 @@ export const Products: React.FC = () => {
       },
       {
         name: 'expo-multiple-media-imagepicker',
-        image: data.picker.childImageSharp.fixed,
+        image: data.picker.childImageSharp.gatsbyImageData,
+        alt: 'expo-multiple-media-imagepicker',
         date: new Date(2019, 6, 1),
         description: 'expoのMediaLibraryを利用した、複数選択可能なimagepicker',
         tags: ['ReactNative', 'expo', 'JavaScript'],
@@ -142,7 +126,8 @@ export const Products: React.FC = () => {
       },
       {
         name: 'emacs-dashboard-hackernews',
-        image: data.hackernews.childImageSharp.fixed,
+        image: data.hackernews.childImageSharp.gatsbyImageData,
+        alt: 'emacs-dashboard-hackernews',
         date: new Date(2018, 12, 1),
         description: 'Hacker Newsを表示するEmacs Dashboard用のプラグイン',
         tags: ['Emacs lisp'],
@@ -159,15 +144,17 @@ export const Products: React.FC = () => {
       },
       {
         name: 'hugo-plesure-theme',
-        image: data.hugo.childImageSharp.fixed,
+        image: data.hugo.childImageSharp.gatsbyImageData,
+        alt: 'hugo-plesure-theme',
         date: new Date(2017, 11, 1),
-        description: 'ブログジェネレータHugo用の明るいテーマ',
+        description: 'Hugo用の明るいテーマ',
         tags: ['hugo', 'Stylus'],
         github: 'https://github.com/hyakt/hugo-theme-pleasure'
       },
       {
         name: 'この本いつ発売したっけ?',
-        image: data.linebot.childImageSharp.fixed,
+        image: data.linebot.childImageSharp.gatsbyImageData,
+        alt: 'この本いつ発売したっけ',
         date: new Date(2017, 8, 1),
         description: '本の最新巻がいつ発売されたか教えてくれるLine用Bot',
         tags: ['Node.js', 'Express', 'Google Books API', 'Now'],
@@ -175,7 +162,8 @@ export const Products: React.FC = () => {
       },
       {
         name: 'SHAPIO',
-        image: data.shapio.childImageSharp.fixed,
+        image: data.shapio.childImageSharp.gatsbyImageData,
+        alt: 'shapio',
         date: new Date(2016, 3, 1),
         description:
           'テレビゲーム内のシチュエーションに合わせて変形するコントローラ',
@@ -184,7 +172,8 @@ export const Products: React.FC = () => {
       },
       {
         name: 'Enhancing Gaming Experience System Using See-Through HMD ',
-        image: data.hmd.childImageSharp.fixed,
+        image: data.hmd.childImageSharp.gatsbyImageData,
+        alt: 'hmd',
         date: new Date(2014, 3, 1),
         description:
           'テレビゲームをプレイする時に透過型のHMDを装着することでゲームの楽しさを向上するシステム',
@@ -193,14 +182,15 @@ export const Products: React.FC = () => {
       },
       {
         name: '入れ替えても読めちゃうBot',
-        image: data.twitterbot.childImageSharp.fixed,
+        image: data.twitterbot.childImageSharp.gatsbyImageData,
+        alt: '入れ替えても読めちゃうBot',
         date: new Date(2014, 3, 1),
         description: '単語ごとの文字を入れ替えた文章をリプライするTwitter用Bot',
         tags: ['Java', 'MeCab', 'GoogleApp Engine'],
         github: 'https://github.com/hyakt/CambridgeBot'
       }
     ],
-    []
+    [data]
   )
 
   const styles = {
