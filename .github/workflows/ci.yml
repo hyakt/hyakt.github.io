@@ -27,14 +27,20 @@ jobs:
       with:
         node-version: '14'
         cache: 'yarn'
-    - name: yarn install
+    - name: install
       run: yarn install --frozen-lockfile --non-interactive
 
-    - name: yarn type-check
+    - name: type-check
       run: yarn type-check
 
-    - name: yarn lint
+    - name: lint
       run: yarn lint
 
-    - name: yarn deploy
-      run: yarn deploy
+    - name: build
+      run: yarn build
+
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
