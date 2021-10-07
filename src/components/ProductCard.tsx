@@ -3,12 +3,9 @@ import { css } from '@emotion/react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
-import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
-
 import { rhythm } from '../utils/typography'
 import colors from '../constants/colors'
+import { graphql, useStaticQuery } from 'gatsby'
 
 export type Props = {
   name: string
@@ -76,7 +73,8 @@ const styles = {
     margin: '0 0.2rem'
   }),
   icon: css({
-    fontSize: '1.4rem'
+    height: '1rem',
+    width: '1rem'
   }),
   tagsContainer: css({
     display: 'flex',
@@ -97,6 +95,16 @@ const styles = {
 }
 
 export const ProductCard: React.FC<Props> = (props) => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        github: file(relativePath: { eq: "social/github.svg" }) {
+          publicURL
+        }
+      }
+    `
+  )
+
   return (
     <Flippy
       flipOnHover={true}
@@ -124,7 +132,7 @@ export const ProductCard: React.FC<Props> = (props) => {
             {props.github && (
               <div css={styles.linkItem}>
                 <a target='_blank' rel='noreferrer' href={props.github}>
-                  <FontAwesomeIcon icon={faGithubSquare} css={styles.icon} />
+                  <img css={styles.icon} src={data.github.publicURL} />
                 </a>
               </div>
             )}
@@ -132,10 +140,7 @@ export const ProductCard: React.FC<Props> = (props) => {
             {props.url && (
               <div css={styles.linkItem}>
                 <a target='_blank' rel='noreferrer' href={props.url}>
-                  <FontAwesomeIcon
-                    icon={faExternalLinkSquareAlt}
-                    css={styles.icon}
-                  />
+                  🔗
                 </a>
               </div>
             )}
