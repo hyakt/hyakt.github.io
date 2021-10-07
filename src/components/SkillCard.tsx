@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 
-import { Skill } from '../utils/types'
+import { Skill } from '../types'
 import { rhythm } from '../utils/typography'
 import colors from '../constants/colors'
 import { css } from '@emotion/react'

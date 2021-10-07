@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
-import { Product } from '../utils/types'
+import { Product } from '../types'
 import { rhythm } from '../utils/typography'
 import colors from '../constants/colors'
 

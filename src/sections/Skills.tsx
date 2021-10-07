@@ -7,7 +7,7 @@ import { SkillCard } from '../components/SkillCard'
 import { Carousel3D } from '../components/ui/Carousel3D'
 
 import { rhythm } from '../utils/typography'
-import { Skill } from '../utils/types'
+import { Skill } from '../types'
 import colors from '../constants/colors'
 
 export const Skills: React.FC = () => {

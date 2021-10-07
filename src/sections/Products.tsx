@@ -8,7 +8,7 @@ import { Section } from '../components/Section'
 import { ProductCard } from '../components/ProductCard'
 
 import { rhythm } from '../utils/typography'
-import { Product } from '../utils/types'
+import { Product } from '../types'
 
 export const Products: React.FC = () => {
   const data = useStaticQuery(graphql`
