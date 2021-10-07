@@ -28,7 +28,7 @@ jobs:
         node-version: '14'
         cache: 'yarn'
     - name: yarn install
-      run: yarn install --check-files --frozen-lockfile --non-interactive
+      run: yarn install --frozen-lockfile --non-interactive
 
     - name: yarn type-check
       run: yarn type-check
@@ -36,3 +36,5 @@ jobs:
     - name: yarn lint
       run: yarn lint
 
+    - name: yarn deploy
+      run: yarn deploy
