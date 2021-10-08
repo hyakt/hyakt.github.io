@@ -3,17 +3,19 @@ import Typography from 'typography'
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
-  headerFontFamily: ['Montserrat', 'sans-serif'],
-  bodyFontFamily: ['Noto Sans JP', 'Georgia', 'serif'],
+  headerFontFamily: ['Arial Black', 'sans-serif'],
+  bodyFontFamily: [
+    'ヒラギノ角ゴ Pro W3',
+    'Hiragino Kaku Gothic Pro',
+    'メイリオ',
+    'Meiryo',
+    '游ゴシック',
+    'Yu Gothic',
+    'ＭＳ Ｐゴシック',
+    'MS PGothic',
+    'sans-serif'
+  ],
   googleFonts: [
-    {
-      name: 'Montserrat',
-      styles: ['300', '400', '500', '700', '900']
-    },
-    {
-      name: 'Noto Sans JP',
-      styles: ['300', '400', '500', '700', '900']
-    },
     {
       name: 'Londrina Outline',
       styles: ['400']
