@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "yarn build && gh-pages -d public -b master",
+    "deploy": "yarn build && gh-pages -d public -b gh-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "type-check": "tsc --noEmit",
