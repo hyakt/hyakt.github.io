@@ -3,7 +3,7 @@ import Typography from 'typography'
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
-  headerFontFamily: ['Arial Black', 'sans-serif'],
+  headerFontFamily: ['Arial Black', 'AvenirNext-Heavy', 'sans-serif'],
   bodyFontFamily: [
     'ヒラギノ角ゴ Pro W3',
     'Hiragino Kaku Gothic Pro',
