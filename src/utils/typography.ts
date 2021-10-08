@@ -4,14 +4,19 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: ['Montserrat', 'sans-serif'],
-  bodyFontFamily: ['Noto Sans JP', 'Georgia', 'serif'],
+  bodyFontFamily: [
+    'Helvetica Neue',
+    'Helvetica',
+    'Hiragino Sans',
+    'Hiragino Kaku Gothic ProN',
+    'Arial',
+    'Yu Gothic',
+    'Meiryo',
+    'sans-serif'
+  ],
   googleFonts: [
     {
-      name: 'Montserrat',
-      styles: ['300', '400', '500', '700', '900']
-    },
-    {
-      name: 'Noto Sans JP',
+      name: 'MontserratMontserrat',
       styles: ['300', '400', '500', '700', '900']
     },
     {
