@@ -15,52 +15,52 @@ export const Products: React.FC = () => {
     query {
       laserwave: file(relativePath: { eq: "product/laserwave.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250, height: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       portfolio: file(relativePath: { eq: "product/portfolio.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       regist: file(relativePath: { eq: "product/regist.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250, height: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       picker: file(relativePath: { eq: "product/picker.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       hackernews: file(relativePath: { eq: "product/hackernews.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250, height: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       linebot: file(relativePath: { eq: "product/linebot.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       hugo: file(relativePath: { eq: "product/hugo.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250, height: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       shapio: file(relativePath: { eq: "product/shapio.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250, height: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       hmd: file(relativePath: { eq: "product/hmd.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 250, height: 250)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
       twitterbot: file(relativePath: { eq: "product/twitterbot.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED)
+          gatsbyImageData(width: 250, height: 250)
         }
       }
     }
