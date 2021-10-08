@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
 import React from 'react'
 import { css } from '@emotion/react'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -8,6 +6,7 @@ import { rhythm } from '../utils/typography'
 import colors from '../constants/colors'
 import { Overflow } from '../components/Overflow'
 import { Social } from '../components/Social'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export const Header: React.FC = () => {
   const data = useStaticQuery(
@@ -82,7 +81,12 @@ export const Header: React.FC = () => {
         <div>
           <div css={styles.icon}>
             <a href={data.site.siteMetadata.icon} download>
-              <img css={styles.iconImage} src={data.profile.publicURL} />
+              <StaticImage
+                css={styles.iconImage}
+                src='../images/profile.png'
+                alt='boooooo'
+                placeholder='blurred'
+              />
             </a>
           </div>
           <h1 css={styles.title}>{data.site.siteMetadata.author}</h1>
