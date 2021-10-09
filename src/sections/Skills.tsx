@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { Section } from '../components/Section'
@@ -7,7 +7,6 @@ import { SkillCard, Props as SkillCardProps } from '../components/SkillCard'
 import { Carousel3D } from '../components/ui/Carousel3D'
 
 import { rhythm } from '../utils/typography'
-import colors from '../constants/colors'
 
 export const Skills: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -89,13 +88,15 @@ export const Skills: React.FC = () => {
     }
   `)
 
+  const theme = useTheme()
+
   const skills: SkillCardProps[] = useMemo(
     () => [
       {
         name: 'Frontend',
         description: ``,
         relations: [],
-        color: `${colors.fg}`,
+        color: theme.colors.fg,
         backgroundColor: '#F7E032',
         image: (
           <Carousel3D

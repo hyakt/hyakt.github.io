@@ -1,213 +1,46 @@
-/** @jsx jsx */
-import { Global, css, jsx } from '@emotion/react'
 import React from 'react'
+import { Global, css, ThemeProvider } from '@emotion/react'
 
-import colors from '../constants/colors'
+import { reset } from '../utils/reset'
+import { theme } from '../utils/theme'
+
+const global = css`
+  body {
+    background: ${theme.colors.bubbles};
+    border-left: 1rem solid ${theme.colors.bubbles};
+    border-right: 1rem solid ${theme.colors.bubbles};
+    color: ${theme.colors.fg};
+  }
+  a:link {
+    color: ${theme.colors.fg};
+  }
+  a:visited {
+    color: ${theme.colors.fg};
+  }
+  a:hover {
+    color: ${theme.colors.fg};
+  }
+  a:active {
+    color: ${theme.colors.fg};
+  }
+`
+
+const background = css`
+  background: ${theme.colors.paleale};
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 1s;
+`
 
 export const Layout: React.FC = (props) => {
-  const reset = css`
-    html,
-    body,
-    div,
-    span,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    abbr,
-    address,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    samp,
-    small,
-    strong,
-    sub,
-    sup,
-    var,
-    b,
-    i,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    ,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    aarticle,
-    aside,
-    canvas,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-    }
-
-    body {
-      line-height: 1;
-    }
-
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-      display: block;
-    }
-
-    nav ul {
-      list-style: none;
-    }
-
-    blockquote,
-    q {
-      quotes: none;
-    }
-
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-      content: '';
-      content: none;
-    }
-
-    a {
-      margin: 0;
-      padding: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-    }
-
-    /* change colours to suit your needs */
-    ins {
-      background-color: #ff9;
-      color: #000;
-      text-decoration: none;
-    }
-
-    /* change colours to suit your needs */
-    mark {
-      background-color: #ff9;
-      color: #000;
-      font-style: italic;
-      font-weight: bold;
-    }
-
-    del {
-      text-decoration: line-through;
-    }
-
-    abbr[title],
-    dfn[title] {
-      border-bottom: 1px dotted;
-      cursor: help;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    /* change border colour to suit your needs */
-    hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid #cccccc;
-      margin: 1em 0;
-      padding: 0;
-    }
-
-    input,
-    select {
-      vertical-align: middle;
-    }
-  `
-  const global = css`
-    body {
-      background: ${colors.bubbles};
-      border-left: 1rem solid ${colors.bubbles};
-      border-right: 1rem solid ${colors.bubbles};
-      color: ${colors.fg};
-    }
-    a:link {
-      color: ${colors.fg};
-    }
-    a:visited {
-      color: ${colors.fg};
-    }
-    a:hover {
-      color: ${colors.fg};
-    }
-    a:active {
-      color: ${colors.fg};
-    }
-  `
-  const background = css`
-    background: ${colors.paleale};
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    transition: 1s;
-  `
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Global styles={reset} />
       <Global styles={global} />
       <div css={background}>
-        <div>
-          <main>{props.children}</main>
-        </div>
+        <main>{props.children}</main>
       </div>
-    </>
+    </ThemeProvider>
   )
 }

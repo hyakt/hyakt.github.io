@@ -1,14 +1,15 @@
 import React from 'react'
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { rhythm } from '../utils/typography'
-import colors from '../constants/colors'
 import { Overflow } from '../components/Overflow'
 import { Social } from '../components/Social'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export const Header: React.FC = () => {
+  const theme = useTheme()
+
   const data = useStaticQuery(
     graphql`
       query HeaderQuery {
@@ -30,7 +31,7 @@ export const Header: React.FC = () => {
     container: css({
       display: 'flex',
       height: '100vh',
-      backgroundColor: colors.bubbles,
+      backgroundColor: theme.colors.bubbles,
       justifyContent: 'center',
       alignItems: 'center',
       alignContent: 'center',
@@ -64,12 +65,12 @@ export const Header: React.FC = () => {
       marginTop: rhythm(1)
     }),
     wave: css({
-      fill: colors.bubbles,
+      fill: theme.colors.bubbles,
       width: '100%'
     }),
     bubbles: css({
-      fill: colors.paleale,
-      stroke: colors.bubbles,
+      fill: theme.colors.paleale,
+      stroke: theme.colors.bubbles,
       strokeWidth: '2px'
     })
   }

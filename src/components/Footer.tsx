@@ -1,11 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
 import React from 'react'
-import { css } from '@emotion/react'
-
-import colors from '../constants/colors'
+import { css, useTheme } from '@emotion/react'
 
 export const Footer: React.FC = () => {
+  const theme = useTheme()
+
   const styles = {
     container: css({
       position: 'fixed',
@@ -16,11 +14,11 @@ export const Footer: React.FC = () => {
       bottom: 0,
       height: '1.2rem',
       width: '100%',
-      background: colors.bubbles
+      background: theme.colors.bubbles
     }),
     copyright: css({
       fontWeight: 300,
-      color: colors.fg,
+      color: theme.colors.fg,
       fontSize: '0.5rem'
     })
   }

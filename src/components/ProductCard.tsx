@@ -1,10 +1,9 @@
 import React from 'react'
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import { rhythm } from '../utils/typography'
-import colors from '../constants/colors'
 import { graphql, useStaticQuery } from 'gatsby'
 
 export type Props = {
@@ -19,82 +18,84 @@ export type Props = {
   url?: string
 }
 
-const styles = {
-  cardContainer: {
-    width: '250px',
-    height: '250px'
-  },
-  resetCard: {
-    padding: 0,
-    boxShadow: 'unset'
-  },
-  cardFrontSide: css({
-    position: 'relative',
-    width: '100%',
-    height: '100%',
-    border: `0.2rem solid ${colors.bubbles}`,
-    borderRadius: '125px',
-    overflow: 'hidden'
-  }),
-  cardBackSide: css({
-    position: 'relative',
-    width: '100%',
-    height: '100%',
-    border: `0.2rem solid ${colors.bubbles}`,
-    borderRadius: '125px',
-    overflow: 'hidden',
-    background: colors.brewdog
-  }),
-  name: css({
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    color: colors.bubbles
-  }),
-  image: css({
-    borderRadius: '125px',
-    pointerEvents: 'none',
-    filter: 'brightness(65%)'
-  }),
-  description: css({
-    padding: `${rhythm(1.8)} ${rhythm(2)} 0 ${rhythm(2)}`,
-    color: colors.bubbles
-  }),
-  linkContainer: css({
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: '0.8rem 0'
-  }),
-  linkItem: css({
-    margin: '0 0.2rem'
-  }),
-  icon: css({
-    height: '1rem',
-    width: '1rem'
-  }),
-  tagsContainer: css({
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    margin: '1rem 0.5rem 0 0.5rem'
-  }),
-  tag: css({
-    border: `1px solid ${colors.bubbles}`,
-    margin: '0.1rem',
-    padding: '0.2rem',
-    borderRadius: '1rem',
-    fontSize: '0.6rem',
-    fontWeight: 400,
-    color: colors.bubbles
-  })
-}
-
 export const ProductCard: React.FC<Props> = (props) => {
+  const theme = useTheme()
+
+  const styles = {
+    cardContainer: {
+      width: '250px',
+      height: '250px'
+    },
+    resetCard: {
+      padding: 0,
+      boxShadow: 'unset'
+    },
+    cardFrontSide: css({
+      position: 'relative',
+      width: '100%',
+      height: '100%',
+      border: `0.2rem solid ${theme.colors.bubbles}`,
+      borderRadius: '125px',
+      overflow: 'hidden'
+    }),
+    cardBackSide: css({
+      position: 'relative',
+      width: '100%',
+      height: '100%',
+      border: `0.2rem solid ${theme.colors.bubbles}`,
+      borderRadius: '125px',
+      overflow: 'hidden',
+      background: theme.colors.brewdog
+    }),
+    name: css({
+      position: 'absolute',
+      left: '50%',
+      top: '50%',
+      transform: 'translate(-50%, -50%)',
+      color: theme.colors.bubbles
+    }),
+    image: css({
+      borderRadius: '125px',
+      pointerEvents: 'none',
+      filter: 'brightness(65%)'
+    }),
+    description: css({
+      padding: `${rhythm(1.8)} ${rhythm(2)} 0 ${rhythm(2)}`,
+      color: theme.colors.bubbles
+    }),
+    linkContainer: css({
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      margin: '0.8rem 0'
+    }),
+    linkItem: css({
+      margin: '0 0.2rem'
+    }),
+    icon: css({
+      height: '1rem',
+      width: '1rem'
+    }),
+    tagsContainer: css({
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      margin: '1rem 0.5rem 0 0.5rem'
+    }),
+    tag: css({
+      border: `1px solid ${theme.colors.bubbles}`,
+      margin: '0.1rem',
+      padding: '0.2rem',
+      borderRadius: '1rem',
+      fontSize: '0.6rem',
+      fontWeight: 400,
+      color: theme.colors.bubbles
+    })
+  }
+
   const data = useStaticQuery(
     graphql`
       query {
