@@ -12,7 +12,7 @@ type Props = {
 export const Carousel3D: React.FC<Props> = (props) => {
   const { images } = props
   const n = images.length
-  const speed = n * 4
+  const speed = n * 2
   const deg = 360 / n
   const radius = Math.round(props.width / 2 / Math.tan(Math.PI / n)) + n * 2
   const direction = props.reverse ? -360 : 360

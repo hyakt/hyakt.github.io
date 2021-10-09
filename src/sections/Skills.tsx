@@ -93,38 +93,37 @@ export const Skills: React.FC = () => {
   const skills: SkillCardProps[] = useMemo(
     () => [
       {
-        name: 'Frontend',
-        description: ``,
+        name: 'JavaScript',
+        description: `chotto dekiru`,
         relations: [],
-        color: theme.colors.fg,
-        backgroundColor: '#F7E032',
+        color: theme.colors.stout,
+        backgroundColor: '#FDD83C',
         image: (
           <Carousel3D
             images={[
-              data.npm.publicURL,
-              data.expo.publicURL,
               data.babel.publicURL,
-              data.gatsby.publicURL,
               data.webpack.publicURL,
               data.react.publicURL,
               data.nextjs.publicURL,
-              data.typescript.publicURL
+              data.gatsby.publicURL,
+              data.typescript.publicURL,
+              data.nodejs.publicURL
             ]}
             width={60}
             height={50}
+            reverse
           />
         )
       },
       {
-        name: 'Backend',
-        description: ``,
+        name: 'Infrastructure',
+        description: 'kanzenn ni rikaishita',
         relations: [],
-        color: `#fff`,
-        backgroundColor: '#ccc',
+        color: theme.colors.pilsner,
+        backgroundColor: theme.colors.stout,
         image: (
           <Carousel3D
             images={[
-              data.nodejs.publicURL,
               data.aws.publicURL,
               data.gcp.publicURL,
               data.firebase.publicURL,
@@ -145,7 +144,7 @@ export const Skills: React.FC = () => {
   const styles = {
     container: css({
       display: 'grid',
-      gridGap: rhythm(2),
+      gridGap: rhythm(3),
       gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 270px))',
       justifyContent: 'center',
       justifyAlign: 'center',

@@ -22,7 +22,7 @@ export const SkillCard: React.FC<Props> = (props) => {
     () => ({
       container: css({
         position: 'relative',
-        width: '270px',
+        width: '280px',
         height: '315px'
       }),
       card: {
@@ -50,7 +50,14 @@ export const SkillCard: React.FC<Props> = (props) => {
         fontFamily: 'Londrina Outline',
         textAlign: 'center',
         color: props.color,
-        fontSize: '1.4rem'
+        fontSize: '1.6rem'
+      }),
+      description: css({
+        marginTop: rhythm(0.5),
+        fontFamily: 'Londrina Outline',
+        textAlign: 'center',
+        color: props.color,
+        fontSize: '0.9rem'
       })
     }),
     [props.backgroundColor]
@@ -71,6 +78,7 @@ export const SkillCard: React.FC<Props> = (props) => {
       <div css={styles.content}>
         {props.image}
         <h3 css={styles.title}>{props.name}</h3>
+        <h5 css={styles.description}>{props.description}</h5>
       </div>
     </div>
   )
