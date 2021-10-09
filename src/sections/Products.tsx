@@ -13,6 +13,16 @@ import { rhythm } from '../utils/typography'
 export const Products: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
+      processing: file(relativePath: { eq: "product/processing.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 250, height: 250)
+        }
+      }
+      dayjs: file(relativePath: { eq: "product/dayjs.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 250, height: 250)
+        }
+      }
       laserwave: file(relativePath: { eq: "product/laserwave.png" }) {
         childImageSharp {
           gatsbyImageData(width: 250, height: 250)
@@ -68,6 +78,35 @@ export const Products: React.FC = () => {
 
   const products: ProductCardProps[] = useMemo(
     () => [
+      {
+        name: 'Open Processing',
+        image: data.processing.childImageSharp.gatsbyImageData,
+        alt: 'Open Processing',
+        date: new Date(2021, 8, 18),
+        description: 'p5.jsでジェネラティブアート初めてみました',
+        tags: ['p5.js', 'Typescript'],
+        url: 'https://openprocessing.org/user/282214?view=sketches',
+        github: 'https://github.com/hyakt/myp5'
+      },
+      {
+        name: 'dayjs-jp-format',
+        image: data.dayjs.childImageSharp.gatsbyImageData,
+        alt: 'dayjs-jp-format',
+        date: new Date(2020, 6, 24),
+        description:
+          'day.jsのformat関数にて日本の元号を表示するためのプラグイン',
+        tags: ['dayjs', 'Typescript', 'Jest'],
+        badge: (
+          <a href='https://badge.fury.io/js/dayjs-jp-format'>
+            <img
+              src='https://badge.fury.io/js/dayjs-jp-format.svg'
+              alt='npm version'
+              height='18'
+            />
+          </a>
+        ),
+        github: 'https://github.com/hyakt/dayjs-jp-format'
+      },
       {
         name: 'laserwave-theme(emacs-doom-themes)',
         image: data.laserwave.childImageSharp.gatsbyImageData,
