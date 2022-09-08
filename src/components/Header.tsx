@@ -48,7 +48,8 @@ export const Header: React.FC = () => {
     iconImage: css({
       borderRadius: 'inherit',
       objectFit: 'contain',
-      pointerEvents: 'none'
+      pointerEvents: 'none',
+      filter: 'drop-shadow(2px 3px 3px #949494)'
     }),
     title: css({
       marginTop: rhythm(0.5),
@@ -85,7 +86,7 @@ export const Header: React.FC = () => {
               <StaticImage
                 css={styles.iconImage}
                 src='../images/profile.png'
-                alt='boooooo'
+                alt='🍺'
                 placeholder='blurred'
               />
             </a>
