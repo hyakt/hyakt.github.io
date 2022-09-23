@@ -6,10 +6,9 @@ module.exports = {
     url: 'https://hyakt.dev',
     icon: 'https://www.gravatar.com/avatar/d9618150777ac86730044bb6de049016?s=960',
     socials: {
-      github: 'https://github.com/hyakt/',
-      twitter: 'https://twitter.com/hyakt0/',
-      linkedin: 'https://www.linkedin.com/in/hyakt/',
-      facebook: 'https://www.facebook.com/hyakt0/',
+      github: 'https://github.com/piginbeer/',
+      twitter: 'https://twitter.com/piginbeer/',
+      linkedin: 'https://www.linkedin.com/in/hayato-kajiyama/',
       mail: 'hyakt0@gmail.com'
     }
   },
